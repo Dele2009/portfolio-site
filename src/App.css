@@ -1,0 +1,125 @@
+#root {
+  
+  margin: 0 auto;
+  padding: 6rem 0rem 0rem 0rem;
+  
+}
+
+
+
+
+.run-boy{
+  
+}
+.run-boy ul{
+  background: rgb(128, 0, 0);
+  text-align: left;
+}
+.run-boy input{
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 400px;
+  padding: 0px 0px 0px 20px;
+  background: white;
+  color: black;
+}
+.nav-bar{
+  
+ 
+  position: fixed;
+  top: 10px;
+  left:0;
+  width: 100%;
+  
+  
+
+}
+.nav-bar-inn{
+  padding: 0px 70px;
+  
+}
+.pad{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(146, 145, 145);
+  color: black;
+  border-radius: 25px;
+  padding: 0px 15px;
+  
+}
+.nav-bar ul{
+  display: flex;
+  list-style: none;
+}
+.nav-bar .lis{
+  margin: 10px;
+  padding: 5px 10px;
+ 
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
+  background: rgb(105, 105, 108);
+}
+.nav-bar .lis:hover{
+  background: blue;
+  color:white;
+  cursor: pointer;
+}
+.nav-bar .active{
+  /* margin: 10px;
+  padding: 5px 10px;
+ 
+  border-radius: 10px; */
+  color:white;
+  cursor: pointer;
+  background: #0000ff;
+}
+
+.main-div {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+
+  gap: 70px;
+
+}
+
+.card {
+  width: 100%;
+  box-shadow: 0px 0px 15px black;
+  padding: 15px;
+  border-radius: 20px;
+  background: white;
+  /* flex-grow: 1; */
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-img img {
+  width: 100%;
+  border-radius: 20px;
+  height: 250px;
+}
+
+.card-text {
+  font-size: 20px;
+  color: black;
+}
+.btn-div{
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.btn-div button{
+  width: 90%;
+  background: #0084ff;
+  color: white;
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0px;
+}
