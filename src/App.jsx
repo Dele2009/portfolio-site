@@ -11,50 +11,63 @@ import image5 from './pexels-jakub-tabisz-5599041.jpg';
 import image6 from '/vite.svg';
 
 function App() {
+  const productdetails = [
+    {
+      image: image1,
+      breed: "poodle",
+      price: 200,
+      yesh: false
+
+    },
+    {
+      image: image4,
+      breed: "German shephard",
+      price: 400,
+      yesh: true
+
+    },
+    {
+      image: image5,
+      breed: "lackpol",
+      price: 800,
+      yesh: true
+
+    },
+    {
+      image: image2,
+      breed: "leelo",
+      price: 800,
+      yesh: false
+
+    },
+    {
+      image: image3,
+      breed: "lagjack",
+      price: 100,
+      yesh: false
+
+    },
+    {
+      image: image6,
+      breed: "fradool",
+      price: 600,
+      yesh: true
+
+    }
+  ]
 
 
   return (
     <>
-      
+
       <Nav />
       <div className='main-div'>
-        <New
-          image={image1}
-          breed="poodle"
-          price="$200"
-          yesh={false}
-        />
-        <New
-          image={image4}
-          breed="German shephard"
-          price="$300"
-          yesh={false}
-        />
-        <New
-          image={image5}
-          breed="lackpol"
-          price="$400"
-          yesh={false}
-        />
-
-        <New
-          image={image2}
-          breed="lackpol"
-          price="$400"
-          yesh={true}
-        />
-        <New
-          image={image3}
-          breed="lackpol"
-          price="$400"
-          yesh={false}
-        />
-        <New
-          image={image6}
-          breed="lackpol"
-          price="$400"
-          yesh={true}
-        />
+        <New {...productdetails[0]}/>
+        <New {...productdetails[1]}/>
+        <New {...productdetails[2]}/>
+        <New {...productdetails[3]}/>
+        <New {...productdetails[4]}/>
+        <New {...productdetails[5]}/>
       </div>
 
     </>

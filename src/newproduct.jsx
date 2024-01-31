@@ -1,27 +1,32 @@
 import './App.css'
-function New(props) {
-
+import React, {useState} from 'react';
+function New({image,breed,price,yesh}) {
+  let [prices,setBreed]=useState("$"+price);
+  function changename(){
+    prices=price/2;
+    setBreed("Discount price-$"+prices);
+  }
 
   return (
     <>
       <div className="card">
         <div className='card-img'>
-          <img src={props.image} />
+          <img src={image} />
         </div>
         <div className='card-text'>
           <p>
-            <strong>Dog breed:</strong> {props.breed}
+            <strong>Dog breed:</strong> {breed}
           </p>
           <p>
-            <strong>Price:</strong> {props.price}
+            <strong>Price:</strong> {prices}
           </p>
           <p>
-            <strong>avaliable</strong> {props.yesh?'yes':'no'}
+            <strong>avaliable</strong> {yesh?'yes':'no'}
           </p>
 
         </div>
         <div className="btn-div">
-          <button>Add to cart</button>
+          <button onClick={changename}>Get discount</button>
         </div>
       </div>
     </>
