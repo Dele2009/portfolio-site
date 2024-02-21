@@ -34,7 +34,7 @@ body {
 }
 .section-h{
   height:fit-content;
-  margin:  0px 0px 300px 0px !important;
+  margin:  0px 0px 200px 0px !important;
  
 }
 .body-port {
@@ -72,6 +72,13 @@ body {
 .skill2 {
   height: 9px;
   border-radius: var(--code-size10);
+}
+.link-div-center{
+  display: grid;
+  place-items: center;
+}
+.link-div-center a{
+  width: fit-content;
 }
 
 
@@ -266,6 +273,10 @@ body {
   .cont {
     width: 100% !important;
     height: 300px !important;
+   
+  }
+  .section-h{
+   margin:  0px 0px 120px 0px !important;
    
   }
 }
