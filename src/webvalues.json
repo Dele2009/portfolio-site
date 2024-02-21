@@ -1,0 +1,128 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "images": [
+                "images/blue-watch.jpg"
+            ],
+            "title": "Timeless Elegance Watch",
+            "price": 200,
+            "yesh": false,
+            "description": " Elevate your style with the sleek Timeless Elegance Watch, a perfect blend of sophistication and precision."
+        },
+        {
+            "id": 2,
+            "images": [
+                "images/body oils.jpg"
+            ],
+            "title": "Serenity Glow Body Oils",
+            "price": 400,
+            "yesh": true,
+            "description": " Pamper your senses with Serenity Glow Body Oils, infused with a luxurious blend for deep hydration and radiant, skin."
+        },
+        {
+            "id": 3,
+            "images": [
+                "images/camera.jpg"
+            ],
+            "title": "Visionary Lens Camera",
+            "price": 800,
+            "yesh": true,
+            "description": "Unleash creativity with the compact Visionary Lens Camera, capturing stunning moments with advanced technology."
+        },
+        {
+            "id": 4,
+            "images": [
+                "images/candels.jpg"
+            ],
+            "title": "Aromatherapy Bliss Scented Candles",
+            "price": 800,
+            "yesh": false,
+            "description": "Transform your space into tranquility with Aromatherapy Bliss Scented Candles, handcrafted for a serene ambiance."
+        },
+        {
+            "id": 5,
+            "images": [
+                "images/iphones.jpg"
+            ],
+            "title": "iPhones",
+            "price": 100,
+            "yesh": false,
+            "description": " Experience seamless innovation with these iPhones, redefining connectivity and style in the palm of your hand."
+        },
+        {
+            "id": 6,
+            "images": [
+                "images/perfume.jpg"
+            ],
+            "title": "Essence of Elegance Perfume",
+            "price": 600,
+            "yesh": true,
+            "description": "Unveil your unique essence with Essence of Elegance Perfume, a harmonious blend for a lasting, sophisticated impression."
+        }
+    ],
+
+
+   
+
+    "skillinfo":[
+        {
+            "skill":"HTML5",
+            "skillLogo":"images/html5-svgrepo-com.svg",
+            "skillLength":95
+        },
+        {
+            "skill":"CSS3",
+            "skillLogo":"images/css-svgrepo-com.svg",
+            "skillLength":85
+        },
+        {
+            "skill":"javascript",
+            "skillLogo":"images/javascript-svgrepo-com.svg",
+            "skillLength":60
+        }, 
+        {
+            "skill":"Bootstrap",
+            "skillLogo":"images/bootstrap-logo.png",
+            "skillLength":80
+        },
+        {
+            "skill":"Tailwind",
+            "skillLogo":"images/tailwind-svgrepo-com.svg",
+            "skillLength":55
+        },
+        {
+            "skill":"React",
+            "skillLogo":"images/reactjs-svgrepo-com.svg",
+            "skillLength":55
+        }
+    ],
+
+    "Documents":{
+        "resume":"Docs/Resume.pdf"
+    },
+
+    "projects":[
+        {
+            "Title":"Task Manager Web App",
+            "image":"images/projects-img/task-app.jpg",
+            "description":" Simplify task management with this web application. Developed using HTML, CSS, JavaScript, and Bootstrap for a clean interface. Users can add, edit, and delete tasks for efficient organization."
+        },
+        {
+            "Title":"Hotel Booking Web App",
+            "image":"images/projects-img/hotel-app.jpg",
+            "description":"Easily book hotel rooms using this web application. Utilizing HTML, CSS, and JavaScript, it provides a straightforward booking experience with a user-friendly interface."
+        },
+        {
+            "Title":"Taxi System Web App",
+            "image":"images/projects-img/uber-app.jpg",
+            "description":"Experience convenient transportation with this web application. Built using HTML, CSS, and JavaScript, it mimics a taxi system. Users can request rides in a visually appealing interface."
+        },
+        {
+            "Title":"Password Generator Web App",
+            "image":"images/projects-img/pass-gen.jpg",
+            "description":"Enhance online Password Generator web app. Developed with HTML, CSS, and JavaScript, it creates strong passwords for users. The user-interface ensures a secure password creation process."
+        }
+
+    ]
+}
