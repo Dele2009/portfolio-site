@@ -73,6 +73,9 @@ body {
   height: 9px;
   border-radius: var(--code-size10);
 }
+.swiper-scrollbar-drag{
+  background: linear-gradient(to left, rgb(47, 228, 249), rgb(108, 99, 255)) !important;
+}
 .link-div-center{
   display: grid;
   place-items: center;
