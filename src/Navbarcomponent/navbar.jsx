@@ -13,7 +13,7 @@ export default function Nav() {
     const handleShow = () => setShow(true);
     return (
         <>
-            <header className="nav-bar position-sticky">
+            <header className="nav-bar position-fixed">
                 <nav className="nav-bar-inn">
                     <div className='pad'>
                         <img src={logo} alt="my-logo" />

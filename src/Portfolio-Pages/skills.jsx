@@ -2,9 +2,9 @@ import webInfo from "../webvalues.json";
 
 const Skill = ({ skill, skillLogo, skillLength }) => {
     return (
-        <div className="single-skill">
+        <div className="single-skill main-nav">
             <p className="d-flex fs-5 justify-content-between align-items-center">
-                <img src={skillLogo} alt={`${skill}-logo`} id={`${skill}-logo`} width={60} height={60} /><span>{skillLength}%</span>
+                <img src={skillLogo} alt={`${skill}-logo`} id={`${skill}-logo`} width={60} height={60} /><span className="text-light">{skillLength}%</span>
             </p>
             <div className="bg-grey w-100">
                 <div className="skill2 bg-blue-grad"
@@ -26,7 +26,7 @@ function Skills() {
             <section className="section-h d-flex justify-content-center align-items-center" id="skills-section">
                 <div className="col-10">
 
-                    <p className="fs-1 text-center code-style">Skills</p>
+                    <p className="fs-1 text-center code-style pb-5">Skills</p>
                     <div className="skill-con">
                         <div className="d-flex justify-content-center align-items-center flex-lg-row flex-column gap-5 pb-5 ">
 

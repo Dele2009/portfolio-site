@@ -4,7 +4,7 @@ import me from "../port-img/about-me.svg";
 function Aboutme() {
     return (
 
-        <section className="section-h d-flex align-items-center justify-content-center colp" id="about-section">
+        <section className="section-h d-flex align-items-center justify-content-center colp " id="about-section">
 
             <div className="container">
                 <div className="">

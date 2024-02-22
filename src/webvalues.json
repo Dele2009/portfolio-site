@@ -104,17 +104,17 @@
 
     "projects":[
         {
-            "Title":"Task Manager Web App",
+            "Title":"Task Manager",
             "image":"images/projects-img/task-app.jpg",
             "description":" Simplify task management with this web application. Developed using HTML, CSS, JavaScript, and Bootstrap for a clean interface. Users can add, edit, and delete tasks for efficient organization."
         },
         {
-            "Title":"Hotel Booking Web App",
+            "Title":"Hotel Booking Application",
             "image":"images/projects-img/hotel-app.jpg",
             "description":"Easily book hotel rooms using this web application. Utilizing HTML, CSS, and JavaScript, it provides a straightforward booking experience with a user-friendly interface."
         },
         {
-            "Title":"Taxi System Web App",
+            "Title":"Taxi System App",
             "image":"images/projects-img/uber-app.jpg",
             "description":"Experience convenient transportation with this web application. Built using HTML, CSS, and JavaScript, it mimics a taxi system. Users can request rides in a visually appealing interface."
         },

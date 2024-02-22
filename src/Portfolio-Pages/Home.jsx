@@ -47,14 +47,14 @@ function Homepage () {
   const Resume = webInfo.Documents.resume
 
   return (
-    <div>
+    <>
       <Zoom delay={10}>
         <section
-          className='section-h d-flex align-items-center justify-content-center colp'
+          className='section-h d-flex align-items-center justify-content-center colp main-bg'
           id='hero-section'
         >
           <div className='container'>
-            <div className='row fullscreen d-flex align-items-center justify-content-between flex-lg-row flex-column-reverse'>
+            <div className='row fullscreen d-flex align-items-center gap-5 gap-md-0 justify-content-between flex-lg-row flex-column-reverse'>
               <div className='col-lg col-md mb-md-0 mb-5'>
                 <h6 className='fs-4'>Hello, there! 👋</h6>
                 <h1 className='fs-2'>I'm Dele Aminu</h1>
@@ -98,10 +98,10 @@ function Homepage () {
       </Zoom>
 
       <motion.div
-        className='progress-scroller bg-blue-grad'
+        className='progress-scroller main-nav'
         style={{ scaleX: scrollYProgress }}
       />
-    </div>
+    </>
   )
 }
 export default Homepage
@@ -110,7 +110,7 @@ export const Slider = () => {
   const sliderdatas = webInfo.projects
   return (
     <>
-      <section className='section-h d-flex align-items-center justify-content-center'>
+      <section className='section-h d-flex align-items-center justify-content-center' id='works-section'>
         <div className='w-100'>
           <h1 className='pb-3 fs-1 code-style text-center'>My works</h1>
           <Swiper
@@ -180,14 +180,14 @@ export const Slider = () => {
 
 export const Slidersection = ({ image, Title, description }) => {
   return (
-    <div className='d-flex gap-2 gap-lg-5 justify-content-center align-items-center py-5 py-sm-0 px-3 pro flex-column flex-sm-row'>
+    <div className='d-flex gap-2 gap-lg-5 justify-content-center align-items-center py-5 py-sm-0 px-3 pro flex-column flex-sm-row main-nav'>
       <div>
         <img src={image} alt='logo' width={250} height={250} />
       </div>
       <div className='h-100 d-flex justify-content-center align-items-center'>
         <div>
-          <h4 className='trans-back'>{Title}</h4>
-          <p className='fw-medium d-none d-sm-inline-flex'>{description}</p>
+          <h4 className='trans-back drop-shadow'>{Title}</h4>
+          <p className='fw-medium d-none d-sm-inline-flex text-light'>{description}</p>
         </div>
       </div>
     </div>
