@@ -6,7 +6,8 @@ const url5="http://localhost:8002/api/v1/product/8f688c30-1f7b-4b82-8132-ad8cbd4
 
 
 const url2a='https://dummyjson.com/products/category/furniture';
-const url2b='https://dummyjson.com/products/category/fragrances'
+const url2b='https://dummyjson.com/products/category/fragrances';
+const url2c='https://dummyjson.com/products/category/shoes';
 
 export const Fetchdata1 = async () => {
     try {
@@ -68,6 +69,23 @@ export const Fetchdata2a = async () => {
 export const Fetchdata2b = async () => {
     try {
         const response = await fetch(`${url2b}`);
+        const data = await response.json()
+        const alldata = data.products;
+        const datasort= alldata.sort((c,d)=>c.price-d.price);
+        return  datasort;
+        
+       
+    }
+    catch (e) {
+        console.error(e);
+        throw e
+    }
+
+}
+
+export const Fetchdata2c = async () => {
+    try {
+        const response = await fetch(`${url2c}`);
         const data = await response.json()
         const alldata = data.products;
         const datasort= alldata.sort((c,d)=>c.price-d.price);

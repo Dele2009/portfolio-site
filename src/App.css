@@ -5,16 +5,17 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top:150px;
+  scroll-padding-top: 150px;
 }
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-  padding-top:150px;
-  
+  padding-top: 150px;
+
 
 }
-.main-nav{
+
+.main-nav {
   background: #3F3D56 !important;
 }
 
@@ -30,33 +31,47 @@ body {
   z-index: 999;
   visibility: visible;
 }
-.trans-back{
+
+.trans-back {
   background-clip: text !important;
   background: linear-gradient(to left, rgb(47, 228, 249), rgb(108, 99, 255)) !important;
   width: fit-content !important;
   color: transparent !important;
   -webkit-background-clip: text !important;
 }
-.drop-shadow{
+
+.drop-shadow {
   filter: drop-shadow(0px 0px 10px rgb(0, 229, 255));
 }
-.color-mix{
-  color:  rgb(27, 181, 198) !important;
+
+.color-mix {
+  color: rgb(27, 181, 198) !important;
   width: 35px !important;
   height: 35px !important;
   filter: drop-shadow(0px 0px 10px rgb(0, 229, 255));
-  
 
-  
+
+
 }
-.section-h{
-  height:fit-content;
-  margin:  0px 0px 200px 0px !important;
- 
+
+.section-h {
+  height: fit-content;
+  margin: 0px 0px 200px 0px !important;
+
 }
+
 .body-port {
-  
- background: white;
+
+  background: white;
+}
+
+@media (min-width:992px) {
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: end !important;
+    flex-basis: content !important;
+  }
 }
 
 .bg-blue-grad {
@@ -75,6 +90,7 @@ body {
   padding: 20px;
   transition: transform 0.4s 0s ease-in-out;
 }
+
 .skill-con .single-skill:hover {
   transform: translate(0px, -15px);
   cursor: pointer;
@@ -90,14 +106,17 @@ body {
   height: 9px;
   border-radius: var(--code-size10);
 }
-.swiper-scrollbar-drag{
+
+.swiper-scrollbar-drag {
   background: linear-gradient(to left, rgb(47, 228, 249), rgb(108, 99, 255)) !important;
 }
-.link-div-center{
+
+.link-div-center {
   display: grid;
   place-items: center;
 }
-.link-div-center a{
+
+.link-div-center a {
   width: fit-content;
 }
 
@@ -235,7 +254,7 @@ body {
 
 .contf {
   width: 80%;
-  padding:30px 0px !important;
+  padding: 30px 0px !important;
   /* background:grey; */
 
 }
@@ -243,7 +262,7 @@ body {
 .cont {
   width: 650px !important;
   height: 300px !important;
- 
+
 }
 
 
@@ -253,7 +272,8 @@ body {
   border-radius: 20px;
   box-shadow: 0px 0px 5px grey;
 }
-.cont .pro img{
+
+.cont .pro img {
   border-radius: 20px;
 }
 
@@ -269,7 +289,7 @@ body {
   background-clip: text;
   font-size: 60px !important;
 
-  
+
 }
 
 .subtle {
@@ -288,15 +308,17 @@ body {
 
   }
 }
-@media (max-width:992px){
+
+@media (max-width:992px) {
   .cont {
     width: 100% !important;
     height: 300px !important;
-   
+
   }
-  .section-h{
-   margin:  0px 0px 120px 0px !important;
-   
+
+  .section-h {
+    margin: 0px 0px 120px 0px !important;
+
   }
 }
 

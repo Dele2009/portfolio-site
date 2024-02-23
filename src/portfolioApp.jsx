@@ -7,7 +7,7 @@ import Mainportfolionavbar from "./Navbarcomponent/navbarportfolio";
 import Homepage from "./Portfolio-Pages/Home";
 import "./App.css"
 import Errormessage from './Products-componets/errorPage';
-import { Page, Page2, Page3, Page4 } from "./Products-componets/page";
+import { Page, Page2, Page3, Page4,Page5 } from "./Products-componets/page";
 
 
 
@@ -30,19 +30,19 @@ function Portfolio() {
                         <Route path="/products" element={<App/>} >
                             <Route
                                 path="/products"
-                                element={<Page />}
-                            />
-                            <Route
-                                path="/products/page2"
                                 element={<Page2 />}
                             />
                             <Route
-                                path="/products/page3"
+                                path="/products/page2"
                                 element={<Page3 />}
                             />
                             <Route
-                                path="/products/page4"
+                                path="/products/page3"
                                 element={<Page4 />}
+                            />
+                            <Route
+                                path="/products/page4"
+                                element={<Page5 />}
                             />
 
                         </Route>

@@ -10,7 +10,7 @@ function Mainportfolionavbar () {
   return (
     <>
       <Navbar expand='lg' className='main-nav px-lg-5' fixed='top'>
-        <Container fluid>
+        <Container fluid >
           <Navbar.Brand as={Link} to='/' className='fs-3'>
             <code className='text-light'>
               D.<span className='trans-back drop-shadow'>append(</span>aminu
@@ -19,42 +19,41 @@ function Mainportfolionavbar () {
           </Navbar.Brand>
 
           <IconContext.Provider value={{ className: 'color-mix' }}>
-            <Navbar.Toggle className='border-0 shadow-none'>
+            <Navbar.Toggle
+              className='border-0 shadow-none'
+              aria-controls='navbarScroll'
+            >
               <HiMenu />
             </Navbar.Toggle>
           </IconContext.Provider>
 
-          <Navbar.Offcanvas
-            id='offcanvasNavbar-expand-lg'
-            className='main-nav'
-            placement='start'
-          >
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title id='offcanvasNavbarLabel-expand-lg'>
-                <code className='text-light'>
-                  D.<span className='trans-back drop-shadow'>append(</span>aminu
-                  <span className='trans-back drop-shadow'>)</span>
-                </code>
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className='justify-content-end flex-grow-1 pe-3 fs-5'>
-                <Nav.Link className='trans-back drop-shadow' href='#hero-section'>
-                  Home
-                </Nav.Link>
-                <Nav.Link className='text-light' href='#about-section'>
-                  About me
-                </Nav.Link>
-                <Nav.Link className='text-light' href='#skills-section'>
-                  Skills
-                </Nav.Link>
-                <Nav.Link className='text-light' href='#works-section'>
-                  Myworks
-                </Nav.Link>
-                <Nav.Link className='text-light' as={Link} target="_blank" to='/products'>
-                  Projects
-                </Nav.Link>
-                {/* <NavDropdown
+          <Navbar.Collapse id='navbarScroll'>
+            <Nav
+              className='mt-4 mb-2 mt-lg-0 mb-lg-0 fs-4'
+              style={{ maxHeight: '300px',}}
+              navbarScroll
+            >
+              <Nav.Link className='trans-back drop-shadow' href='#hero-section'>
+                Home
+              </Nav.Link>
+              <Nav.Link className='text-light' href='#about-section'>
+                About me
+              </Nav.Link>
+              <Nav.Link className='text-light' href='#skills-section'>
+                Skills
+              </Nav.Link>
+              <Nav.Link className='text-light' href='#works-section'>
+                Myworks
+              </Nav.Link>
+              <Nav.Link
+                className='text-light'
+                as={Link}
+                to='/products'
+                target='_blank'
+              >
+                Projects
+              </Nav.Link>
+              {/* <NavDropdown
                   href='#skills-section'
                   title='Projects'
                   id='offcanvasNavbarDropdown-expand-lg'
@@ -75,9 +74,8 @@ function Mainportfolionavbar () {
                     React-Js
                   </NavDropdown.Item>
                 </NavDropdown> */}
-              </Nav>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
 
