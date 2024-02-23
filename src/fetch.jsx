@@ -7,7 +7,7 @@ const url5="http://localhost:8002/api/v1/product/8f688c30-1f7b-4b82-8132-ad8cbd4
 
 const url2a='https://dummyjson.com/products/category/furniture';
 const url2b='https://dummyjson.com/products/category/fragrances';
-const url2c='https://dummyjson.com/products/category/shoes';
+const url2c='https://dummyjson.com/products/category/groceries';
 
 export const Fetchdata1 = async () => {
     try {
