@@ -1,4 +1,3 @@
-import '../mybootstrap.css'
 import '../App.css'
 import hero from '../port-img/heros.svg'
 import Aboutme from './about-me'

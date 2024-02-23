@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap'
 import '../App.css'
-import '../mybootstrap.css'
+
 import { Link, Outlet } from 'react-router-dom'
 import { HiMenu } from 'react-icons/hi'
 import { IconContext } from 'react-icons'
@@ -47,8 +47,7 @@ function Mainportfolionavbar () {
               </Nav.Link>
               <Nav.Link
                 className='text-light'
-                as={Link}
-                to='/products'
+                href='https://products-page-phi.vercel.app'
                 target='_blank'
               >
                 Projects
