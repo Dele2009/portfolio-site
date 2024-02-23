@@ -51,7 +51,7 @@ function Mainportfolionavbar () {
                 <Nav.Link className='text-light' href='#works-section'>
                   Myworks
                 </Nav.Link>
-                <Nav.Link className='text-light' as={Link} tartget="_blank" to='/products'>
+                <Nav.Link className='text-light' as={Link} target="_blank" to='/products'>
                   Projects
                 </Nav.Link>
                 {/* <NavDropdown
