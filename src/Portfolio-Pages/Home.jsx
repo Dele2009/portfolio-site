@@ -177,7 +177,7 @@ export const Slider = () => {
   )
 }
 
-export const Slidersection = ({ image, Title, description }) => {
+export const Slidersection = ({ image, Title, description,projectlink }) => {
   return (
     <div className='d-flex gap-2 gap-lg-5 justify-content-center align-items-center py-5 py-sm-0 px-3 pro flex-column flex-sm-row main-nav'>
       <div>
@@ -185,10 +185,10 @@ export const Slidersection = ({ image, Title, description }) => {
       </div>
       <div className='h-100 d-flex justify-content-center align-items-center'>
         <div>
-          <h4 className='trans-back drop-shadow'>{Title}</h4>
+          <a  href={projectlink} target='_blank' className='trans-back drop-shadow h4'>{Title}</a>
           <p className='fw-medium d-none d-sm-inline-flex text-light'>{description}</p>
         </div>
-      </div>
+      </div>.
     </div>
   )
 }

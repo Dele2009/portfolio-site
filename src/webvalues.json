@@ -40,22 +40,27 @@
         {
             "Title":"Task Manager",
             "image":"images/projects-img/task-app.jpg",
-            "description":" Simplify task management with this web application. Developed using HTML, CSS, JavaScript, and Bootstrap for a clean interface. Users can add, edit, and delete tasks for efficient organization."
+            "description":" Simplify task management with this web application. Developed using HTML, CSS, JavaScript, and Bootstrap for a clean interface. Users can add, edit, and delete tasks for efficient organization.",
+            "projectlink":"https://jav-teal.vercel.app/time-manager.html"
         },
         {
             "Title":"Hotel Booking Application",
             "image":"images/projects-img/hotel-app.jpg",
-            "description":"Easily book hotel rooms using this web application. Utilizing HTML, CSS, and JavaScript, it provides a straightforward booking experience with a user-friendly interface."
+            "description":"Easily book hotel rooms using this web application. Utilizing HTML, CSS, and JavaScript, it provides a straightforward booking experience with a user-friendly interface.",
+            "projectlink":"https://jav-teal.vercel.app/HOTEL_APP.html"
         },
         {
             "Title":"Taxi System App",
             "image":"images/projects-img/uber-app.jpg",
-            "description":"Experience convenient transportation with this web application. Built using HTML, CSS, and JavaScript, it mimics a taxi system. Users can request rides in a visually appealing interface."
+            "description":"Experience convenient transportation with this web application. Built using HTML, CSS, and JavaScript, it mimics a taxi system. Users can request rides in a visually appealing interface.",
+            "projectlink":"https://jav-teal.vercel.app/uber.html"
+    
         },
         {
             "Title":"Password Generator Web App",
             "image":"images/projects-img/pass-gen.jpg",
-            "description":"Enhance online Password Generator web app. Developed with HTML, CSS, and JavaScript, it creates strong passwords for users. The user-interface ensures a secure password creation process."
+            "description":"Enhance online Password Generator web app. Developed with HTML, CSS, and JavaScript, it creates strong passwords for users. The user-interface ensures a secure password creation process.",
+            "projectlink":"https://jav-teal.vercel.app/passwordgenerate.html"
         }
 
     ]
