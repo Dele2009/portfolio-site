@@ -40,7 +40,7 @@ function Aboutme () {
               fullscreen='md-down'
               aria-labelledby='contained-modal-title-vcenter'
               centered
-              className='max-h'
+              
             >
               <Modal.Header closeButton className='main-nav border-0'>
                 <Modal.Title id='contained-modal-title-vcenter'>
@@ -51,7 +51,7 @@ function Aboutme () {
                   </code>
                 </Modal.Title>
               </Modal.Header>
-              <Modal.Body className='main-nav text-light overflow-auto d-flex justify-content-center align-items-center flex-column gap-5'>
+              <Modal.Body className='main-nav text-light d-flex justify-content-center align-items-center flex-column gap-5'>
                 <div>
                   <h4 className='fs-3'>
                     🌐 <span className='trans-back'>Web Tech Lover</span>

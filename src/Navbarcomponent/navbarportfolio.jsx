@@ -35,39 +35,31 @@ function Mainportfolionavbar () {
               style={{ maxHeight: '300px' }}
               navbarScroll
             >
-              <Nav.Link
-                className="text-light"
-                as={NavLink}
-                to='/#hero-section'
-              >
+              <Nav.Link className='text-light' as={NavLink} to='/#hero-section'>
                 Home
               </Nav.Link>
               <Nav.Link
-                className="text-light"
+                className='text-light'
                 to='/#about-section'
                 as={NavLink}
               >
                 About me
               </Nav.Link>
               <Nav.Link
-                className="text-light"
+                className='text-light'
                 to='/#skills-section'
                 as={NavLink}
               >
                 Skills
               </Nav.Link>
               <Nav.Link
-                className="text-light"
+                className='text-light'
                 to='/#works-section'
                 as={NavLink}
               >
                 Myworks
               </Nav.Link>
-              <Nav.Link
-                className="text-light"
-                as={NavLink}
-                to='/projects'
-              >
+              <Nav.Link className='text-light' as={NavLink} to='/projects'>
                 Projects
               </Nav.Link>
               {/* <Nav.Link
