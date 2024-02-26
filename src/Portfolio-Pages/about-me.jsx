@@ -51,7 +51,7 @@ function Aboutme () {
                   </code>
                 </Modal.Title>
               </Modal.Header>
-              <Modal.Body className='main-nav text-light d-flex justify-content-center align-items-center flex-column gap-5'>
+              <Modal.Body className='pt-5 main-nav text-light d-flex justify-content-center align-items-center flex-column gap-5'>
                 <div>
                   <h4 className='fs-3'>
                     🌐 <span className='trans-back'>Web Tech Lover</span>
