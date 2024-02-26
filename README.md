@@ -64,3 +64,13 @@ REACT HOOKS
 
 
 import React, {useState} from 'react';
+
+INSTALL LIBRIES
+
+react-router-dom
+react-bootstrap bootstrap
+typed.js
+framer
+react-scroll
+react-awesome-reveal
+react-icons

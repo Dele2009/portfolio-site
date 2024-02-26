@@ -188,7 +188,7 @@ export const Slidersection = ({ image, Title, description,projectlink }) => {
           <a  href={projectlink} target='_blank' className='trans-back drop-shadow h4'>{Title}</a>
           <p className='fw-medium d-none d-sm-inline-flex text-light'>{description}</p>
         </div>
-      </div>.
+      </div>
     </div>
   )
 }

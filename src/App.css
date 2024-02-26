@@ -72,6 +72,14 @@ body {
     justify-content: end !important;
     flex-basis: content !important;
   }
+  .max-h{
+    max-height: 100%;
+    margin: 0px auto;
+  }
+  .max-h2{
+    max-height: 70%;
+    margin: 0px auto;
+  }
 }
 
 .bg-blue-grad {

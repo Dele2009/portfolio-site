@@ -4,17 +4,20 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Mainportfolionavbar from './Navbarcomponent/navbarportfolio'
 
 import Homepage from './Portfolio-Pages/Home'
+import Myprojects from './Portfolio-Pages/projects'
 import './App.css'
 import Errormessage from './Portfolio-Pages/errorPage'
 
 function Portfolio () {
   return (
     <div className='body-port'>
+     
       <Router>
+         <Mainportfolionavbar />
         <Routes>
-          <Route path='/' element={<Mainportfolionavbar />}>
-            <Route path='' element={<Homepage />} />
-          </Route>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/projects' element={<Myprojects />} />
+
           <Route path='*' element={<Errormessage />} />
         </Routes>
       </Router>
