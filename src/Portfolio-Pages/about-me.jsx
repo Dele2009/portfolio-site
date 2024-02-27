@@ -26,7 +26,7 @@ function Aboutme () {
               staying ahead of the curve with emerging technologies.
             </p>
 
-            {/* Remember to add modal to this to display more infomation*/}
+            {/* modal to this to display more infomation*/}
             <Button
               className='btn border-0 bg-blue-grad text-uppercase text-light'
               onClick={() => setShow(true)}

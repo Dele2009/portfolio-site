@@ -11,6 +11,7 @@ html {
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
   padding-top: 150px;
+  overflow-x: hidden;
 
 
 }
@@ -26,10 +27,12 @@ body {
   right: 0;
   height: 7px;
   border-radius: 20px;
-
   transform-origin: 0%;
   z-index: 999;
   visibility: visible;
+}
+.projects{
+  border: 1px solid grey;
 }
 
 .trans-back {
@@ -72,14 +75,23 @@ body {
     justify-content: end !important;
     flex-basis: content !important;
   }
-  .max-h{
+
+  .max-h {
     max-height: 100%;
     margin: 0px auto;
   }
-  .max-h2{
+
+  .max-h2 {
     max-height: 70%;
     margin: 0px auto;
   }
+}
+
+.glow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  place-items: center;
+  grid-gap: 40px;
 }
 
 .bg-blue-grad {

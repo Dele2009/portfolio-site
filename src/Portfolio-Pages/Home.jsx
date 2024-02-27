@@ -165,7 +165,7 @@ export const Slider = () => {
           </Swiper>
           <div className='link-div-center'>
             <Link
-              to='/'
+              to='/projects'
               className=' btn border-0 bg-blue-grad text-uppercase text-light mt-4'
             >
               View more...
