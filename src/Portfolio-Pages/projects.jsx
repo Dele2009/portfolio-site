@@ -4,13 +4,13 @@ function Myprojects () {
   const javs = projectsinfo.js_projects
   return (
     <>
-      <div className='row px-5 gap-3 '>
+      <div className='row px-2 px-lg-5 gap-3 '>
         {basics.map((basic, index) => {
           return <Projects key={index} {...basic} />
         })}
       </div>
 
-      <div className='row px-5 gap-3 '  style={{paddingTop:"8rem"}}>
+      <div className='row px-2 px-lg-5 gap-3 '  style={{paddingTop:"8rem"}}>
         {javs.map((jav, index) => {
           return <Projects key={index} {...jav} />
         })}
