@@ -59,7 +59,7 @@ function Mainportfolionavbar () {
               >
                 Myworks
               </Nav.Link>
-              <Nav.Link className='text-light' as={NavLink} to='/projects'>
+              <Nav.Link className='text-light' as={RouterLink} to='/projects'>
                 Projects
               </Nav.Link>
               {/* <Nav.Link
