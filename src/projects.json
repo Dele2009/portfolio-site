@@ -9,6 +9,12 @@
                 "Clean and Precise Responsive Design",
                 "Bootstrap Integration for Consistency",
                 "Static Reflection of Aptible's Aesthetic"
+            ],
+            "projectsstacks":[
+                "html",
+                "css",
+                "Bootstrap",
+                "Vanilla JavaScript"
             ]
         },
         {
@@ -20,6 +26,11 @@
                 "Methodical Responsive Design",
                 "Proficient Use of Bootstrap Framework",
                 "Static Representation Embodying chipotle Aesthetic"
+            ],
+            "projectsstacks":[
+                "html",
+                "css",
+                "Bootstrap"
             ]
         },
         {
@@ -31,6 +42,12 @@
                 "Simple and Effective Responsive Design",
                 "Thoughtful Bootstrap Component Implementation",
                 "Static Exhibition of Podia's Design Principles"
+            ],
+            "projectsstacks":[
+                "html",
+                "css",
+                "Bootstrap"
+               
             ]
         }
     ],
@@ -44,6 +61,12 @@
                 "Streamlined design ensuring smooth task management on various devices.",
                 "Seamless use of Bootstrap components for consistent and user-friendly task organization",
                 "Implementation of JavaScript for interactive and dynamic task management."
+            ],
+            "projectsstacks":[
+                "html",
+                "css",
+                "Bootstrap",
+                "Vanilla JavaScript"
             ]
         },
         {
@@ -55,6 +78,12 @@
                 "Responsive layout for a smooth and intuitive navigation experience.",
                 "Skillful use of Bootstrap elements to replicate the organized functionality of the Uber System App.",
                 "Utilization of JavaScript for interactive user-interface."
+            ],
+            "projectsstacks":[
+                "html",
+                "css",
+                "Bootstrap",
+                "Vanilla JavaScript"
             ]
         },
         {
@@ -66,6 +95,12 @@
                 "Design with responsiveness to ensure a pleasant user experience in hotel room reservations.",
                 "Integration of JavaScript for dynamic search, date selection, and room reservation interactions.",
                 "Enhance user interactions and elevate the overall booking experience."
+            ],
+            "projectsstacks":[
+                "html",
+                "css",
+                "Bootstrap",
+                "Vanilla JavaScript"
             ]
         }
     ]

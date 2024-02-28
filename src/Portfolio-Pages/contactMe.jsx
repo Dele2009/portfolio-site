@@ -4,7 +4,7 @@ import { Button, Col, Form, Row } from 'react-bootstrap'
 import webinfo from '../webvalues.json'
 
 function ContactMe () {
-  const States = webinfo.states
+  const States = webinfo.states;
   return (
     <>
       <section
@@ -12,9 +12,9 @@ function ContactMe () {
         id='hero-section'
       >
         <div className='container'>
-            <div>
-                <p className=" fs-1 code-style text-center">Contact Me</p>
-            </div>
+          <div>
+            <p className=' fs-1 code-style text-center'>Contact Me</p>
+          </div>
           <div className='row fullscreen d-flex align-items-center gap-5  justify-content-between'>
             <div className='col-lg'>
               <img className='img-fluid' src={contact} alt='contact-logo' />
@@ -51,7 +51,7 @@ function ContactMe () {
                     <Form.Group lg as={Col} controlId='formGridState'>
                       <Form.Label>State</Form.Label>
                       <Form.Select defaultValue='Choose...'>
-                        <option>Choose...</option>
+                        <option>...CHOOSE...</option>
                         {States.map((State, index) => {
                           return <option key={index}>{State}</option>
                         })}

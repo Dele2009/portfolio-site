@@ -28,7 +28,8 @@ const Projects = ({
   projectTitle,
   githubrepo,
   projectlink,
-  projectfeatures
+  projectfeatures,
+  projectsstacks
 }) => {
   return (
     <>
@@ -65,6 +66,11 @@ const Projects = ({
               >
                 Live preview
               </a>
+            </div>
+            <div className='d-flex justify-content-center align-items-center gap-3 mt-3 text-uppercase '>
+              {projectsstacks.map((projectsstack, index) => {
+                return <span className='btn text-light bg-dark ' key={index}>{projectsstack}</span>
+              })}
             </div>
           </div>
         </div>
