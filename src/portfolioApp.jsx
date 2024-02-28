@@ -1,5 +1,8 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 // import Mainroute from "./Navbarcomponent/Mainrouter";
 import Mainportfolionavbar from './Navbarcomponent/navbarportfolio'
 
@@ -8,10 +11,32 @@ import Myprojects from './Portfolio-Pages/projects'
 import './App.css'
 import Errormessage from './Portfolio-Pages/errorPage'
 
+
+
 function Portfolio () {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Mainportfolionavbar />,
+      errorElement:<Errormessage />,
+      children: [
+        {
+          path: "",
+          element: <Homepage />,
+        },
+        {
+          path: "projects",
+          element: <Myprojects />,
+        },
+      ],
+    },
+  ]);
+
+
   return (
     <div className='body-port'>
-      <Router>
+        <RouterProvider router={router} />
+      {/* <Router>
         <Routes>
           <Route path='/' element={<Mainportfolionavbar />}>
             <Route path='/' element={<Homepage />} />
@@ -21,7 +46,7 @@ function Portfolio () {
 
           <Route path='*' element={<Errormessage />} />
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   )
 }
