@@ -11,12 +11,13 @@ import Errormessage from './Portfolio-Pages/errorPage'
 function Portfolio () {
   return (
     <div className='body-port'>
-     
       <Router>
-         <Mainportfolionavbar />
         <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/projects' element={<Myprojects />} />
+          <Route path='/' element={<Mainportfolionavbar />}>
+            <Route path='/' element={<Homepage />} />
+            <Route path='/projects' element={<Myprojects />} />
+          </Route>
+         
 
           <Route path='*' element={<Errormessage />} />
         </Routes>
