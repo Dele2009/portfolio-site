@@ -1,10 +1,8 @@
 import '../App.css'
-import hero from '../port-img/heros.svg'
+import Intro from './intro'
 import Aboutme from './about-me'
 import Skills from './skills'
 import webInfo from '../webvalues.json'
-import { useEffect, useRef } from 'react'
-import Typed from 'typed.js';
 import { Link } from 'react-router-dom'
 
 import {
@@ -22,66 +20,11 @@ import { Slide, Reveal, Fade, Zoom } from 'react-awesome-reveal'
 
 function Homepage () {
   const { scrollYProgress } = useScroll()
-  const position = useRef(null)
-
-  useEffect(() => {
-    const typed = new Typed(position.current, {
-      strings: [
-        'A Front-end Developer',
-        'Have an idea 💡 ?',
-        "Let's get to work"
-      ],
-      typeSpeed: 100,
-      backSpeed: 100,
-      smartBackspace: true,
-      loop: true,
-      loopCount: Infinity
-    })
-
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typed.destroy()
-    }
-  }, [])
-  const Resume = webInfo.Documents.resume
 
   return (
     <>
       <Zoom delay={10}>
-        <section
-          className='section-h d-flex align-items-center justify-content-center colp main-bg'
-          id='hero-section'
-        >
-          <div className='container'>
-            <div className='row fullscreen d-flex align-items-center gap-5 gap-md-0 justify-content-between flex-lg-row flex-column-reverse'>
-              <div className='col-lg col-md mb-md-0 mb-5'>
-                <h6 className='fs-4'>Hello, there! 👋</h6>
-                <h1 className='fs-2'>I'm Dele Aminu</h1>
-                <h1 className='fs-2 trans-back'>
-                  <span ref={position} />
-                </h1>
-
-                <p className='fs-5'>
-                  A creative mind in the realm of web development. With a knack
-                  for turning ideas into interactive experiences, I'm on a
-                  mission to build a digital world that's both functional and
-                  aesthetically pleasing.
-                </p>
-
-                <a
-                  href={Resume}
-                  target='_blank'
-                  className=' btn bg-blue-grad border-0 text-uppercase text-light'
-                >
-                  Download resume
-                </a>
-              </div>
-              <div className='col-lg col-md'>
-                <img className='img-fluid' src={hero} alt='' />
-              </div>
-            </div>
-          </div>
-        </section>
+        <Intro />
       </Zoom>
 
       <Zoom delay={10}>
@@ -109,7 +52,10 @@ export const Slider = () => {
   const sliderdatas = webInfo.projects
   return (
     <>
-      <section className='section-h d-flex align-items-center justify-content-center' id='works-section'>
+      <section
+        className='section-h d-flex align-items-center justify-content-center'
+        id='works-section'
+      >
         <div className='w-100'>
           <h1 className='pb-3 fs-1 code-style text-center'>My works</h1>
           <Swiper
@@ -177,7 +123,7 @@ export const Slider = () => {
   )
 }
 
-export const Slidersection = ({ image, Title, description,projectlink }) => {
+export const Slidersection = ({ image, Title, description, projectlink }) => {
   return (
     <div className='d-flex gap-2 gap-lg-5 justify-content-center align-items-center py-5 py-sm-0 px-3 pro flex-column flex-sm-row main-nav'>
       <div>
@@ -185,10 +131,18 @@ export const Slidersection = ({ image, Title, description,projectlink }) => {
       </div>
       <div className='h-100 d-flex justify-content-center align-items-center'>
         <div>
-          <a  href={projectlink} target='_blank' className='trans-back drop-shadow h4'>{Title}</a>
-          <p className='fw-medium d-none d-sm-inline-flex text-light'>{description}</p>
+          <a
+            href={projectlink}
+            target='_blank'
+            className='trans-back drop-shadow h4'
+          >
+            {Title}
+          </a>
+          <p className='fw-medium d-none d-sm-inline-flex text-light'>
+            {description}
+          </p>
         </div>
-      </div>
+      </div>F
     </div>
   )
 }

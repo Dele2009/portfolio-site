@@ -6,7 +6,7 @@ function Errormessage() {
         <>
             <div className="d-flex justify-content-center align-items-center flex-column h-100">
                 <h1>Ooops 😮😗 this pageis not available</h1>
-                <h3>Click <Link to="/">here</Link> to get back to homepage 😎🤙</h3>
+                <h3>Click <Link to="">here</Link> to get back to homepage 😎🤙</h3>
             </div>
         </>
     );

@@ -2,9 +2,9 @@ import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import '../App.css'
 
-import { Link as RouterLink, Outlet } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
-import { NavHashLink as NavLink } from 'react-router-hash-link'
+import { NavHashLink } from 'react-router-hash-link'
 import { HiMenu } from 'react-icons/hi'
 import { IconContext } from 'react-icons'
 
@@ -13,7 +13,7 @@ function Mainportfolionavbar () {
     <>
       <Navbar expand='lg' className='main-nav px-lg-5' fixed='top'>
         <Container fluid>
-          <Navbar.Brand as={RouterLink} to='/' className='fs-3'>
+          <Navbar.Brand as={Link} to='/' className='fs-3'>
             <code className='text-light'>
               D.<span className='trans-back drop-shadow'>append(</span>aminu
               <span className='trans-back drop-shadow'>)</span>
@@ -35,31 +35,31 @@ function Mainportfolionavbar () {
               style={{ maxHeight: '300px' }}
               navbarScroll
             >
-              <Nav.Link className='text-light' as={NavLink} to='/#hero-section'>
+              <Nav.Link className='text-light' as={NavHashLink} to='/#hero-section'>
                 Home
               </Nav.Link>
               <Nav.Link
                 className='text-light'
                 to='/#about-section'
-                as={NavLink}
+                as={NavHashLink}
               >
                 About me
               </Nav.Link>
               <Nav.Link
                 className='text-light'
                 to='/#skills-section'
-                as={NavLink}
+                as={NavHashLink}
               >
                 Skills
               </Nav.Link>
               <Nav.Link
                 className='text-light'
                 to='/#works-section'
-                as={NavLink}
+                as={NavHashLink}
               >
                 Myworks
               </Nav.Link>
-              <Nav.Link className='text-light' as={RouterLink} to='/projects'>
+              <Nav.Link className='text-light' as={Link} to='/projects'>
                 Projects
               </Nav.Link>
               {/* <Nav.Link
@@ -74,7 +74,7 @@ function Mainportfolionavbar () {
         </Container>
       </Navbar>
 
-      <Outlet />
+      
     </>
   )
 }

@@ -10,6 +10,7 @@ import Homepage from './Portfolio-Pages/Home'
 import Myprojects from './Portfolio-Pages/projects'
 import './App.css'
 import Errormessage from './Portfolio-Pages/errorPage'
+import Navroot from './Navbarcomponent/route';
 
 
 
@@ -17,15 +18,15 @@ function Portfolio () {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Mainportfolionavbar />,
+      element: <Navroot />,
       errorElement:<Errormessage />,
       children: [
         {
-          path: "",
+          path: "/",
           element: <Homepage />,
         },
         {
-          path: "projects",
+          path: "/projects",
           element: <Myprojects />,
         },
       ],
