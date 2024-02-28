@@ -1,8 +1,5 @@
 import React from 'react'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 // import Mainroute from "./Navbarcomponent/Mainrouter";
 import Mainportfolionavbar from './Navbarcomponent/navbarportfolio'
 
@@ -10,33 +7,35 @@ import Homepage from './Portfolio-Pages/Home'
 import Myprojects from './Portfolio-Pages/projects'
 import './App.css'
 import Errormessage from './Portfolio-Pages/errorPage'
-import Navroot from './Navbarcomponent/route';
-
-
+import Navroot from './Navbarcomponent/route'
 
 function Portfolio () {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
-      path: "/",
+      path: '/',
+      //navbar as rootelement
       element: <Navroot />,
-      errorElement:<Errormessage />,
+      //error syntax element
+      errorElement: <Errormessage />,
+      //nested pages
       children: [
         {
-          path: "/",
-          element: <Homepage />,
+          //homepage path & element
+          path: '/',
+          element: <Homepage />
         },
         {
-          path: "/projects",
-          element: <Myprojects />,
-        },
-      ],
-    },
-  ]);
-
+          //projects path & element
+          path: '/projects',
+          element: <Myprojects />
+        }
+      ]
+    }
+  ])
 
   return (
     <div className='body-port'>
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
       {/* <Router>
         <Routes>
           <Route path='/' element={<Mainportfolionavbar />}>
