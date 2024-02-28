@@ -5,6 +5,7 @@ import Mainportfolionavbar from './Navbarcomponent/navbarportfolio'
 
 import Homepage from './Portfolio-Pages/Home'
 import Myprojects from './Portfolio-Pages/projects'
+import ContactMe from './Portfolio-Pages/contactMe'
 import './App.css'
 import Errormessage from './Portfolio-Pages/errorPage'
 import Navroot from './Navbarcomponent/route'
@@ -28,6 +29,11 @@ function Portfolio () {
           //projects path & element
           path: '/projects',
           element: <Myprojects />
+        },
+        {
+          //Contact-me path & element
+          path: '/contact_Me',
+          element: <ContactMe />
         }
       ]
     }

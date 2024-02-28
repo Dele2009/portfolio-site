@@ -34,8 +34,6 @@
     "Documents": {
         "resume": "Docs/Resume.pdf"
     },
-
-  
     "projects": [
         {
             "Title": "Task Manager",
@@ -61,5 +59,43 @@
             "description": "Enhance online Password Generator web app. Developed with HTML, CSS, and JavaScript, it creates strong passwords for users. The user-interface ensures a secure password creation process.",
             "projectlink": "https://jav-teal.vercel.app/passwordgenerate.html"
         }
+    ],
+    "states": [
+        "Abia",
+        "Adamawa",
+        "Akwa Ibom",
+        "Anambra",
+        "Bauchi",
+        "Bayelsa",
+        "Benue",
+        "Borno",
+        "Cross River",
+        "Delta",
+        "Ebonyi",
+        "Edo",
+        "Ekiti",
+        "Enugu",
+        "Gombe",
+        "Imo",
+        "Jigawa",
+        "Kaduna",
+        "Kano",
+        "Katsina",
+        "Kebbi",
+        "Kogi",
+        "Kwara",
+        "Lagos",
+        "Nasarawa",
+        "Niger",
+        "Ogun",
+        "Ondo",
+        "Osun",
+        "Oyo",
+        "Plateau",
+        "Rivers",
+        "Sokoto",
+        "Taraba",
+        "Yobe",
+        "Zamfara"
     ]
 }

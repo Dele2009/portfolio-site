@@ -62,6 +62,11 @@ function Mainportfolionavbar () {
               <Nav.Link className='text-light' as={Link} to='/projects'>
                 Projects
               </Nav.Link>
+              <Nav.Link className='text-light' as={Link} to='/contact_Me'>
+                Contact Me
+              </Nav.Link>
+
+              
               {/* <Nav.Link
                 className='text-light'
                 href='https://products-page-phi.vercel.app'

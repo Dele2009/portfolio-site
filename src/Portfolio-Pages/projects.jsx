@@ -1,19 +1,22 @@
 import projectsinfo from '../projects.json'
+
 function Myprojects () {
   const basics = projectsinfo.hT_Cs_Btrp_projects
   const javs = projectsinfo.js_projects
   return (
     <>
-      <div className='row px-3 px-lg-5 gap-3 '>
-        {basics.map((basic, index) => {
-          return <Projects key={index} {...basic} />
-        })}
+      <div className='row px-3 gap-3 '>
+        {basics &&
+          basics.map((basic, index) => {
+            return <Projects key={index} {...basic} />
+          })}
       </div>
 
-      <div className='row px-3 px-lg-5 gap-3 '  style={{paddingTop:"8rem"}}>
-        {javs.map((jav, index) => {
-          return <Projects key={index} {...jav} />
-        })}
+      <div className='row px-3 gap-3 ' style={{ paddingTop: '8rem' }}>
+        {javs &&
+          javs.map((jav, index) => {
+            return <Projects key={index} {...jav} />
+          })}
       </div>
     </>
   )
@@ -30,7 +33,7 @@ const Projects = ({
   return (
     <>
       <div className=' col-lg '>
-        <div className='rounded-4 shadow border-1'>
+        <div className='w-100 rounded-4 shadow'>
           <div className='w-100 ' style={{ height: '300px' }}>
             <img
               src={projectimgSrc}
