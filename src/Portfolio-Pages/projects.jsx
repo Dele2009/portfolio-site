@@ -5,14 +5,14 @@ function Myprojects () {
   const javs = projectsinfo.js_projects
   return (
     <>
-      <div className='row px-3 gap-3 '>
+      <div className='row justify-content-center px-3 gap-3 '>
         {basics &&
           basics.map((basic, index) => {
             return <Projects key={index} {...basic} />
           })}
       </div>
 
-      <div className='row px-3 gap-3 ' style={{ paddingTop: '8rem' }}>
+      <div className='row justify-content-center px-3 gap-3 ' style={{ paddingTop: '8rem' }}>
         {javs &&
           javs.map((jav, index) => {
             return <Projects key={index} {...jav} />
@@ -33,7 +33,7 @@ const Projects = ({
 }) => {
   return (
     <>
-      <div className=' col-lg '>
+      <div className=' col-md '>
         <div className='w-100 rounded-4 shadow'>
           <div className='w-100 ' style={{ height: '300px' }}>
             <img
@@ -42,32 +42,28 @@ const Projects = ({
               className='w-100 h-100 rounded-top-4'
             />
           </div>
-          <div className='main-nav p-3 rounded-bottom-4'>
+          <div className='main-nav p-3'>
             <p className='mx-auto trans-back text-capitalize fs-3'>
               {projectTitle}
             </p>
             <ul className='mx-auto text-light fs-5 text-none'>
               {projectfeatures.map((projectfeature, index) => {
-                return <li key={index}>{projectfeature}</li>
+                return <li key={index} className='py-1'>{projectfeature}</li>
               })}
             </ul>
             
-            <div className='d-flex justify-content-center align-items-center gap-3 mt-3 text-uppercase  py-3 '>
-              {projectsstacks.map((projectsstack, index) => {
-                return <span className='btn text-light bg-dark ' key={index}>{projectsstack}</span>
-              })}
-            </div>
+           
 
-            <div className='d-flex justify-content-center align-items-center gap-5 stacks pt-3'>
+            <div className='d-flex justify-content-center align-items-center gap-5 py-3'>
               <a
-                className='btn bg-blue-grad border-0 text-uppercase text-light'
+                className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light'
                 href={githubrepo}
                 target='_blank'
               >
                 Github
               </a>
               <a
-                className='btn bg-blue-grad border-0 text-uppercase text-light'
+                className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light'
                 href={projectlink}
                 target='_blank'
               >
@@ -75,6 +71,11 @@ const Projects = ({
               </a>
             </div>
           </div>
+          <div className='d-flex justify-content-center rounded-bottom-4 align-items-center gap-3 text-uppercase main-nav-light  py-3 '>
+              {projectsstacks.map((projectsstack, index) => {
+                return <span className='btn text-light rounded-4  k-to' key={index}>{projectsstack}</span>
+              })}
+            </div>
         </div>
       </div>
     </>

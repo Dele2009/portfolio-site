@@ -19,7 +19,13 @@ body {
 .main-nav {
   background: #3F3D56 !important;
 }
+.main-nav-light{
+  background: #2F2E41 !important;
+}
 
+.k-to{
+  font-size: clamp(0.65em,1vw,2em) !important;
+}
 .progress-scroller {
   position: fixed;
   bottom: 0;
@@ -88,17 +94,19 @@ body {
   }
 }
 
-.glow {
+/* .glow {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
   place-items: center;
   grid-gap: 40px;
 }
+.w-pro{
+  width: 500px;
+} */
 
 .bg-blue-grad {
   background: linear-gradient(to left, rgb(47, 228, 249), rgb(108, 99, 255));
 }
-
 
 .code-style {
   color: #6C63FF;

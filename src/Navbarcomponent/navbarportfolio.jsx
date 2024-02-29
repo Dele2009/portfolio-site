@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 import { NavHashLink } from 'react-router-hash-link'
 import { HiMenu } from 'react-icons/hi'
+import { BsGithub,BsWhatsapp,BsLinkedin } from "react-icons/bs";
 import { IconContext } from 'react-icons'
 import { animateScroll } from 'react-scroll'
 
@@ -76,8 +77,20 @@ function Mainportfolionavbar () {
                 Projects
               </Nav.Link>
               <Nav.Link className='text-light' as={Link} to='/contact_Me'>
-                Contact Me
+                Contact me
               </Nav.Link>
+              {/* <div className='ms-5 d-flex'>
+                <Nav.Link>
+                  <BsGithub />
+                </Nav.Link>
+                <Nav.Link>
+                <BsWhatsapp />
+                </Nav.Link>
+                <Nav.Link>
+                <BsLinkedin />
+                </Nav.Link>
+                
+              </div> */}
 
               {/* <Nav.Link
                 className='text-light'
