@@ -73,7 +73,7 @@ const Projects = ({
           </div>
           <div className='d-flex justify-content-center rounded-bottom-4 align-items-center gap-3 text-uppercase main-nav-light  py-3 '>
               {projectsstacks.map((projectsstack, index) => {
-                return <span className='btn text-light rounded-4  k-to' key={index}>{projectsstack}</span>
+                return <em className='btn text-light bg-dark rounded-4  k-to' key={index}>{projectsstack}</em>
               })}
             </div>
         </div>
