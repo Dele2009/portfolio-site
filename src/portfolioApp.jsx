@@ -1,7 +1,6 @@
 import React from 'react'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
-// import Mainroute from "./Navbarcomponent/Mainrouter";
-import Mainportfolionavbar from './Navbarcomponent/navbarportfolio'
+
 
 import Homepage from './Portfolio-Pages/Home'
 import Myprojects from './Portfolio-Pages/projects'

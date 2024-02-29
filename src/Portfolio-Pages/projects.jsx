@@ -51,7 +51,14 @@ const Projects = ({
                 return <li key={index}>{projectfeature}</li>
               })}
             </ul>
-            <div className='d-flex justify-content-center align-items-center gap-5'>
+            
+            <div className='d-flex justify-content-center align-items-center gap-3 mt-3 text-uppercase  py-3 '>
+              {projectsstacks.map((projectsstack, index) => {
+                return <span className='btn text-light bg-dark ' key={index}>{projectsstack}</span>
+              })}
+            </div>
+
+            <div className='d-flex justify-content-center align-items-center gap-5 stacks pt-3'>
               <a
                 className='btn bg-blue-grad border-0 text-uppercase text-light'
                 href={githubrepo}
@@ -66,11 +73,6 @@ const Projects = ({
               >
                 Live preview
               </a>
-            </div>
-            <div className='d-flex justify-content-center align-items-center gap-3 mt-3 text-uppercase '>
-              {projectsstacks.map((projectsstack, index) => {
-                return <span className='btn text-light bg-dark ' key={index}>{projectsstack}</span>
-              })}
             </div>
           </div>
         </div>

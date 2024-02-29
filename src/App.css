@@ -103,6 +103,9 @@ body {
 .code-style {
   color: #6C63FF;
 }
+.stacks{
+  border-top: 2px solid white;
+}
 
 .skill-con .single-skill {
   width: 100%;
