@@ -29,6 +29,16 @@
             "skill": "React",
             "skillLogo": "images/reactjs-svgrepo-com.svg",
             "skillLength": 55
+        },
+        {
+            "skill": "Json",
+            "skillLogo": "images/json-file-svgrepo-com.svg",
+            "skillLength": 80           
+        },
+        {
+            "skill": "Git",
+            "skillLogo": "images/git-icon-logo-svgrepo-com.svg",
+            "skillLength": 90
         }
     ],
     "Documents": {
