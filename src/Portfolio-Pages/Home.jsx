@@ -4,6 +4,7 @@ import Aboutme from './about-me'
 import Skills from './skills'
 import webInfo from '../webvalues.json'
 import { Link } from 'react-router-dom'
+import { Scrollup } from '../mydepens'
 
 import {
   Navigation,
@@ -112,6 +113,7 @@ export const Slider = () => {
           <div className='link-div-center'>
             <Link
               to='/projects'
+              onClick={()=>Scrollup()}
               className=' btn border-0 bg-blue-grad text-uppercase text-light mt-4'
             >
               View more...

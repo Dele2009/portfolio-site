@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Scrollup } from '../mydepens'
 import '../App.css'
 
 import { Link } from 'react-router-dom'
@@ -8,12 +9,10 @@ import { NavHashLink } from 'react-router-hash-link'
 import { HiMenu } from 'react-icons/hi'
 import { BsGithub,BsWhatsapp,BsLinkedin } from "react-icons/bs";
 import { IconContext } from 'react-icons'
-import { animateScroll } from 'react-scroll'
+
 
 function Mainportfolionavbar () {
-  const scrollup = () => {
-    animateScroll.scrollToTop()
-  }
+ 
   return (
     <>
       <Navbar expand='lg' className='main-nav px-lg-5' fixed='top'>
@@ -72,7 +71,7 @@ function Mainportfolionavbar () {
                 className='text-light'
                 as={Link}
                 to='/projects'
-                onClick={() => scrollup()}
+                onClick={() => Scrollup()}
               >
                 Projects
               </Nav.Link>
