@@ -45,13 +45,13 @@ function ContactMe () {
   //   }
   // }
   const [uservalues, setUservalues] = useState({
-    from_name: '',
+    user_firstname: '',
     user_lastname: '',
     user_email: '',
     user_state: '',
     user_city: '',
     user_zipcode: '',
-    message: ''
+    user_message: ''
   })
   const [errors, setErrors] = useState({})
 
@@ -70,16 +70,16 @@ function ContactMe () {
     const email_format = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     const state_format = /\b(?!none)\w+\b/
 
-    if (!uservalues.from_name.trim()) {
-      form_errors.from_name = '* Field Required *'
-    } else if (!text_format.test(uservalues.from_name)) {
-      form_errors.from_name = 'Name too short'
+    if (!uservalues.user_firstname.trim()) {
+      form_errors.user_firstname = '* Field Required *'
+    } else if (!text_format.test(uservalues.user_firstname)) {
+      form_errors.user_firstname = 'Name too short'
     }
 
     if (!uservalues.user_lastname.trim()) {
       form_errors.user_lastname = '* Field Required *'
     } else if (!text_format.test(uservalues.user_lastname)) {
-      form_errors.from_name = 'Name too short'
+      form_errors.user_firstname = 'Name too short'
     }
 
     if (!uservalues.user_email.trim()) {
@@ -92,26 +92,24 @@ function ContactMe () {
       form_errors.user_state = '* Field Required *'
     }
 
-    if (!uservalues.message.trim()) {
-      form_errors.message = '* Field Required *'
+    if (!uservalues.user_message.trim()) {
+      form_errors.user_message = '* Field Required *'
     }
 
     setErrors(form_errors)
     if (Object.keys(form_errors).length === 0) {
-      //alert('successful')
+      //alert('successful') 3c0b4bb2-6268-4e52-bc90-36337d0798cc
+      const email_config = {
+        SecureToken: '3c0b4bb2-6268-4e52-bc90-36337d0798cc',
+        To: 'obedaminu303@gmail.com',
+        From: uservalues.user_email,
+        Subject: 'Contact from portfolio form',
+        Body: `${uservalues.user_firstname} ${uservalues.user_lastname} from ${uservalues.user_state} ${uservalues.user_city||null} ${uservalues.user_zipcode||null} sent this message ${uservalues.user_message} `
+      }
 
-      emailjs
-        .sendForm('service_ufcnpq2', 'template_ofokice', form.current, {
-          publicKey: '7llsWR5IQj1i3kYXx'
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!')
-          },
-          error => {
-            console.log('FAILED...', error.text)
-          }
-        )
+      if(window.Email){
+        window.Email.send(email_config)
+      }
     }
   }
 
@@ -137,12 +135,12 @@ function ContactMe () {
                       <Form.Label>First Name</Form.Label>
                       <Form.Control
                         type='text'
-                        name='from_name'
+                        name='user_firstname'
                         placeholder='John'
                         onChange={handle_change}
                       />
-                      {errors.from_name && (
-                        <i className='text-danger'>{errors.from_name}</i>
+                      {errors.user_firstname && (
+                        <i className='text-danger'>{errors.user_firstname}</i>
                       )}
                     </Form.Group>
 
@@ -206,11 +204,11 @@ function ContactMe () {
                     <Form.Label>Message</Form.Label>
                     <Form.Control
                       as='textarea'
-                      name='message'
+                      name='user_message'
                       onChange={handle_change}
                     />
-                    {errors.message && (
-                      <i className='text-danger'>{errors.message}</i>
+                    {errors.user_message && (
+                      <i className='text-danger'>{errors.user_message}</i>
                     )}
                   </Form.Group>
 
