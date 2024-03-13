@@ -74,3 +74,4 @@ framer
 react-scroll
 react-awesome-reveal
 react-icons
+@emailjs/brower
