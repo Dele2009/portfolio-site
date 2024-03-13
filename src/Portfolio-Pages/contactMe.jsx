@@ -104,7 +104,7 @@ function ContactMe () {
         To: 'obedaminu303@gmail.com',
         From: uservalues.user_email,
         Subject: 'Contact from portfolio form',
-        Body: `${uservalues.user_firstname} ${uservalues.user_lastname} from ${uservalues.user_state} ${uservalues.user_city||null} ${uservalues.user_zipcode||null} sent this message ${uservalues.user_message} `
+        Body: `${uservalues.user_firstname} ${uservalues.user_lastname} from ${uservalues.user_state} ${uservalues.user_city} ${uservalues.user_zipcode} sent this message ${uservalues.user_message} `
       }
 
       if(window.Email){
