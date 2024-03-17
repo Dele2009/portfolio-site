@@ -2,48 +2,12 @@ import React from 'react'
 import contact from '../port-img/contact-logo.svg'
 import { Button, Col, Form, Row } from 'react-bootstrap'
 import webinfo from '../webvalues.json'
-import { useState, useRef } from 'react'
-import emailjs from '@emailjs/browser'
+import { useState} from 'react'
+import { sendEmail } from '../api'
+
 
 function ContactMe () {
-  const States = webinfo.states
-  const form = useRef()
-
-  // const [userFname, setUserFname] = useState(null)
-  // const [userFnameerror, setUserFnameerror] = useState('')
-
-  // const [userlname, setUserlname] = useState('')
-  // const [userlnameerror, setUserlnameerror] = useState(null)
-  // let form = useRef(null)
-  // console.log(form)
-
-  // const valid = e => {
-  //   valid_fname()
-  //   valid_lname()
-  // }
-
-  // const valid_fname = () => {
-  //   let fn_format = /^[a-zA-Z-' ]{5,}$/
-  //   if (userFname === '') {
-  //     setUserFnameerror('Firstname Required')
-  //   } else if (!fn_format.test(userFname)) {
-  //     setUserFnameerror('Field invalid')
-  //   } else {
-  //     setUserFnameerror('')
-  //   }
-  // }
-
-  // const valid_lname = () => {
-  //   const ln_format = /^[a-zA-Z-' ]{5,}$/
-  //   if (userlname === '') {
-  //     setUserlnameerror('Lastname Required')
-  //   }
-  //   else if (!ln_format.test(userlname)) {
-  //     setUserlnameerror('Field invalid')
-  //   } else {
-  //     setUserlnameerror('')
-  //   }
-  // }
+  const States = webinfo.states;
   const [uservalues, setUservalues] = useState({
     user_firstname: '',
     user_lastname: '',
@@ -62,56 +26,83 @@ function ContactMe () {
       [name]: value
     })
   }
-
-  const handle_submit = e => {
-    e.preventDefault()
+  const Validate_form = () => {
     const form_errors = {}
     const text_format = /^[a-zA-Z-' ]{5,}$/
     const email_format = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     const state_format = /\b(?!none)\w+\b/
+    let valid_form = true
 
     if (!uservalues.user_firstname.trim()) {
       form_errors.user_firstname = '* Field Required *'
+      valid_form = false
     } else if (!text_format.test(uservalues.user_firstname)) {
       form_errors.user_firstname = 'Name too short'
+      valid_form = false
     }
 
     if (!uservalues.user_lastname.trim()) {
       form_errors.user_lastname = '* Field Required *'
+      valid_form = false
     } else if (!text_format.test(uservalues.user_lastname)) {
-      form_errors.user_firstname = 'Name too short'
+      form_errors.user_lastname = 'Name too short'
+      valid_form = false
     }
 
     if (!uservalues.user_email.trim()) {
       form_errors.user_email = '* Field Required *'
+      valid_form = false
     } else if (!email_format.test(uservalues.user_email)) {
       form_errors.user_email = 'Email invalid'
+      valid_form = false
     }
 
     if (!state_format.test(uservalues.user_state)) {
       form_errors.user_state = '* Field Required *'
+      valid_form = false
     }
 
     if (!uservalues.user_message.trim()) {
       form_errors.user_message = '* Field Required *'
+      valid_form = false
     }
 
     setErrors(form_errors)
-    if (Object.keys(form_errors).length === 0) {
-      //alert('successful') 3c0b4bb2-6268-4e52-bc90-36337d0798cc
-      const email_config = {
-        SecureToken: '3c0b4bb2-6268-4e52-bc90-36337d0798cc',
-        To: 'obedaminu303@gmail.com',
-        From: uservalues.user_email,
-        Subject: 'Contact from portfolio form',
-        Body: `${uservalues.user_firstname} ${uservalues.user_lastname} from ${uservalues.user_state} ${uservalues.user_city} ${uservalues.user_zipcode} sent this message ${uservalues.user_message} `
+    return valid_form
+  }
+
+  const handle_submit = async e => {
+    e.preventDefault()
+    let is_valid = Validate_form()
+
+    if (is_valid) {
+      try {
+        const response = await sendEmail(uservalues)
+
+        if (response.success) {
+          alert(response.message)
+          setUservalues({
+            user_firstname: '',
+            user_lastname: '',
+            user_email: '',
+            user_state: 'none',
+            user_city: '',
+            user_zipcode: '',
+            user_message: ''
+          })
+        } else {
+          throw new Error(response.message)
+        }
+      } catch (error) {
+        console.error('Error sending email:', error)
+        alert('Failed to send email.')
       }
 
-      if(window.Email){
-        window.Email.send(email_config)
-      }
+     
     }
   }
+
+ 
 
   return (
     <>
@@ -129,7 +120,7 @@ function ContactMe () {
             </div>
             <div className='p-3 p-lg-0 col-lg'>
               <div className=' mb-md-0 mb-5 main-nav text-light p-4 p-lg-5 rounded-5'>
-                <Form onSubmit={handle_submit} ref={form}>
+                <Form onSubmit={handle_submit}>
                   <Row className='mb-3'>
                     <Form.Group lg as={Col} controlId='formGridEmail'>
                       <Form.Label>First Name</Form.Label>
@@ -138,6 +129,7 @@ function ContactMe () {
                         name='user_firstname'
                         placeholder='John'
                         onChange={handle_change}
+                        value={uservalues.user_firstname}
                       />
                       {errors.user_firstname && (
                         <i className='text-danger'>{errors.user_firstname}</i>
@@ -151,6 +143,7 @@ function ContactMe () {
                         name='user_lastname'
                         placeholder='Doe'
                         onChange={handle_change}
+                        value={uservalues.user_lastname}
                       />
                       {errors.user_lastname && (
                         <i className='text-danger'>{errors.user_lastname}</i>
@@ -165,6 +158,7 @@ function ContactMe () {
                       name='user_email'
                       placeholder='johndoe225@example.com'
                       onChange={handle_change}
+                      value={uservalues.user_email}
                     />
                     {errors.user_email && (
                       <i className='text-danger'>{errors.user_email}</i>
@@ -174,7 +168,11 @@ function ContactMe () {
                   <Row className='mb-3'>
                     <Form.Group lg as={Col} controlId='formGridstate'>
                       <Form.Label>State</Form.Label>
-                      <Form.Select name='user_state' onChange={handle_change}>
+                      <Form.Select
+                        name='user_state'
+                        onChange={handle_change}
+                        value={uservalues.user_state}
+                      >
                         <option value='none'>...CHOOSE...</option>
                         {States.map((State, index) => {
                           return (
@@ -191,12 +189,23 @@ function ContactMe () {
 
                     <Form.Group lg as={Col} controlId='formGridcity'>
                       <Form.Label>City</Form.Label>
-                      <Form.Control type='text' name='user_city' />
+                      <Form.Control
+                        type='text'
+                        name='user_city'
+                        onChange={handle_change}
+                        value={uservalues.user_city}
+                      />
                     </Form.Group>
 
                     <Form.Group lg as={Col} controlId='formGridZip'>
                       <Form.Label>Zip</Form.Label>
-                      <Form.Control type='number' name='user_zipcode' min='1' />
+                      <Form.Control
+                        type='number'
+                        name='user_zipcode'
+                        min='1'
+                        onChange={handle_change}
+                        value={uservalues.user_zip}
+                      />
                     </Form.Group>
                   </Row>
 
@@ -206,6 +215,7 @@ function ContactMe () {
                       as='textarea'
                       name='user_message'
                       onChange={handle_change}
+                      value={uservalues.user_message}
                     />
                     {errors.user_message && (
                       <i className='text-danger'>{errors.user_message}</i>
