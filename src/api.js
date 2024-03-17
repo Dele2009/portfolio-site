@@ -1,6 +1,6 @@
 // client/src/api.js
 
-const API_URL = 'http://localhost:3002';
+const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 export const sendEmail = async (formData) => {
   try {
