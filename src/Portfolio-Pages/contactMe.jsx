@@ -95,7 +95,7 @@ function ContactMe () {
         }
       } catch (error) {
         console.error('Error sending email:', error)
-        alert('Failed to send email.')
+        alert(response.message)
       }
 
      
@@ -204,7 +204,7 @@ function ContactMe () {
                         name='user_zipcode'
                         min='1'
                         onChange={handle_change}
-                        value={uservalues.user_zip}
+                        value={uservalues.user_zipcode}
                       />
                     </Form.Group>
                   </Row>
