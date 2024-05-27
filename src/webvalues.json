@@ -39,6 +39,11 @@
             "skill": "Git",
             "skillLogo": "images/git-icon-logo-svgrepo-com.svg",
             "skillLength": 90
+        },
+        {
+            "skill": "Nodejs",
+            "skillLogo": "/images/nodejs-1-logo-svgrepo-com.svg",
+            "skillLength": 70
         }
     ],
     "Documents": {

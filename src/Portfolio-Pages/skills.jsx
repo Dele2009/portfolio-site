@@ -29,7 +29,7 @@ function Skills () {
   const mySkills = webInfo.skillinfo
   const newskills = mySkills.slice(0, 3)
   const newskills2 = mySkills.slice(3, 6)
-  const newskills3 = mySkills.slice(6, 8)
+  const newskills3 = mySkills.slice(6, 9)
   return (
     <>
       <section

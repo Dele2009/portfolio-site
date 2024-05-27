@@ -68,7 +68,7 @@
     {
         "projectTitle": "Maxblogs Blogging App",
         "projectimgSrc": "/images/projects-img/Mainprojects/maxblogs.jpg",
-        "githubrepo": "https://github.com/Dele2009/Maxblogs",
+        "githubrepo": "https://github.com/Dele2009/classMaxblogs",
         "projectlink": "https://maxblogs-online.vercel.app",
         "projectfeatures": [
             "Design with responsiveness to ensure a pleasant user experience in hotel room reservations.",
