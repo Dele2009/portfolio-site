@@ -98,7 +98,7 @@ const Projects = ({
             />
           </div>
           <div className='main-na'>
-            <p className='mx-auto trans-back text-capitalize fs-3'>
+            <p className='mx-auto trans-back text-capitalize fs-3 mt-3'>
               {projectTitle}
             </p>
             {/* <ul className='mx-auto text-light fs-5 text-none'>
@@ -133,7 +133,7 @@ const Projects = ({
               return <div className='col-3 btn text-light bg-dark m-2 k-to p-1' key={index} style={{width:'fit-content'}}># {projectsstack}</div>
             })}
           </div>
-          
+
           {showButton &&
             <div className='d-flex justify-content-end' onClick={() => { setShow(!show) }} style={{ cursor: 'pointer' }}>
               <i className='trans-back'>
