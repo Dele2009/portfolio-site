@@ -5,10 +5,10 @@ import view_icon from '../port-img/view.svg'
 import React, { useState, useEffect, useRef } from 'react';
 
 
- function Myprojects() {
-//   const basics = projectsinfo.hT_Cs_Btrp_projects
-//   const javs = projectsinfo.js_projects
-//   const nodes = projectsinfo.node_projects
+function Myprojects() {
+  //   const basics = projectsinfo.hT_Cs_Btrp_projects
+  //   const javs = projectsinfo.js_projects
+  //   const nodes = projectsinfo.node_projects
   return (
     <>
       <article className='row p-3'>
@@ -73,22 +73,28 @@ const Projects = ({
           <div className='w-100  rounded-4 position-relative shadow-pro' style={{ height: '300px' }}>
             <div className="position-absolute w-100 h-100 main-nav-hover rounded-3">
               <div className='w-100 h-100 d-flex flex-column flex-sm-row justify-content-center align-items-center'>
-                <a
-                  className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light m-3'
-                  href={githubrepo}
-                  target='_blank'
-                >
-                  <img src={git_icon} alt="github_icon" className='me-2' />
-                  <i>Github</i>
-                </a>
-                <a
-                  className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light m-3'
-                  href={projectlink}
-                  target='_blank'
-                >
-                  <img src={view_icon} alt="preview_icon" className='me-2' />
-                  <i>Preview</i>
-                </a>
+                {githubrepo &&
+                  <a
+                    className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light m-3'
+                    href={githubrepo}
+                    target='_blank'
+                  >
+                    <img src={git_icon} alt="github_icon" className='me-2' />
+                    <i>Github</i>
+                  </a>
+                }
+
+                {projectlink &&
+                  <a
+                    className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light m-3'
+                    href={projectlink}
+                    target='_blank'
+                  >
+                    <img src={view_icon} alt="preview_icon" className='me-2' />
+                    <i>Preview</i>
+                  </a>
+                }
+
               </div>
             </div>
             <img
@@ -130,7 +136,7 @@ const Projects = ({
 
           <div ref={testlength} style={show ? null : trucateText} className='row m-auto rounded-bottom-4 text-uppercase w-100 h-100'>
             {projectsstacks.map((projectsstack, index) => {
-              return <div className='col-3 btn text-light bg-dark m-2 k-to p-1' key={index} style={{width:'fit-content'}}># {projectsstack}</div>
+              return <div className='col-3 btn text-light bg-dark m-2 k-to p-1' key={index} style={{ width: 'fit-content' }}># {projectsstack}</div>
             })}
           </div>
 
