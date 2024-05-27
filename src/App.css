@@ -19,13 +19,54 @@ body {
 .main-nav {
   background: #3F3D56 !important;
 }
-.main-nav-light{
+.shadow-pro{
+  box-shadow: 0px 0px 10px #c2c2c2 !important;
+  transition: box-shadow 300ms 0s ease-in-out;
+
+  &:hover{
+    box-shadow: 0px 0px 20px #909090 !important;
+  }
+}
+
+.main-nav-hover {
+  background: transparent;
+  backdrop-filter: blur(0px);
+  transition: background 300ms 0s ease-in-out, backdrop-filter 300ms 0s ease-in-out;
+
+  & a {
+    visibility: hidden;
+    width: fit-content;
+    height: fit-content;
+
+    &>img {
+      width: 25px;
+      height: 25px;
+    }
+    & > i{
+      font-size: 15px;
+    }
+  }
+
+  &:hover {
+    background: #3f3d568a !important;
+    backdrop-filter: blur(5px);
+
+    & a {
+      visibility: visible;
+    }
+  }
+
+}
+
+.main-nav-light {
   background: #2F2E41 !important;
 }
 
-.k-to{
-  font-size: clamp(0.65em,1vw,2em) !important;
+.k-to {
+  font-size: clamp(0.65em, 1vw, 0.3em) !important;
+  /* font-size: 0.3em !important; */
 }
+
 .progress-scroller {
   position: fixed;
   bottom: 0;
@@ -37,7 +78,8 @@ body {
   z-index: 999;
   visibility: visible;
 }
-.projects{
+
+.projects {
   border: 1px solid grey;
 }
 
@@ -111,7 +153,8 @@ body {
 .code-style {
   color: #6C63FF;
 }
-.stacks{
+
+.stacks {
   border-top: 2px solid white;
 }
 

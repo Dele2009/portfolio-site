@@ -1,10 +1,13 @@
 // client/src/api.js
 
 //const API_URL = process.env.REACT_APP_BACKEND_URL;
+//production_url
+//const _url = 'https://fullstack-portfolio-navy.vercel.app'
+const _url = 'https://localhost:3002'
 
 export const sendEmail = async (formData) => {
   try {
-    const response = await fetch(`https://fullstack-portfolio-navy.vercel.app/contact`, {
+    const response = await fetch(`${_url}/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

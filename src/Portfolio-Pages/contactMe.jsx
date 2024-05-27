@@ -2,11 +2,11 @@ import React from 'react'
 import contact from '../port-img/contact-logo.svg'
 import { Button, Col, Form, Row } from 'react-bootstrap'
 import webinfo from '../webvalues.json'
-import { useState} from 'react'
-import { sendEmail } from '../api'
+import { useState } from 'react'
+// import { sendEmail } from '../api'
 
 
-function ContactMe () {
+function ContactMe() {
   const States = webinfo.states;
   const [uservalues, setUservalues] = useState({
     user_firstname: '',
@@ -74,13 +74,23 @@ function ContactMe () {
   const handle_submit = async e => {
     e.preventDefault()
     let is_valid = Validate_form()
+    const _url = 'https://fullstack-portfolio-navy.vercel.app'
+    //const _url = 'http://localhost:4002'
 
     if (is_valid) {
       try {
-        const response = await sendEmail(uservalues)
+        // const response = await sendEmail(uservalues)
+        const response = await fetch(`${_url}/contact`, {
+          // protocol:'https:',
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(uservalues),
+        });
 
-        if (response.success) {
-          alert(response.message)
+        if (response.ok) {
+          alert(response)
           setUservalues({
             user_firstname: '',
             user_lastname: '',
@@ -91,18 +101,18 @@ function ContactMe () {
             user_message: ''
           })
         } else {
-          throw new Error(response.message)
+          throw new Error(response)
         }
       } catch (error) {
         console.error('Error sending email:', error)
-        alert(response.message)
+        alert("Error")
       }
 
-     
+
     }
   }
 
- 
+
 
   return (
     <>

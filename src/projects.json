@@ -1,107 +1,123 @@
-{
-    "hT_Cs_Btrp_projects": [
-        {
-            "projectTitle": "aptible web clone",
-            "projectimgSrc": "images/projects-img/Mainprojects/Aptible-clone.jpg",
-            "githubrepo": "https://github.com/Dele2009/html-css-bootstrap",
-            "projectlink": "https://html-css-bootstrap-seven.vercel.app/Aptible.html",
-            "projectfeatures": [
-                "Clean and Precise Responsive Design",
-                "Bootstrap Integration for Consistency",
-                "Static Reflection of Aptible's Aesthetic"
-            ],
-            "projectsstacks":[
-                "html",
-                "css",
-                "Bootstrap",
-                "Vanilla JavaScript"
-            ]
-        },
-        {
-            "projectTitle": "chipotle web clone",
-            "projectimgSrc": "images/projects-img/Mainprojects/chipotle clone.jpg",
-            "githubrepo": "https://github.com/Dele2009/html-css-bootstrap",
-            "projectlink": "https://html-css-bootstrap-seven.vercel.app/chipotle.html",
-            "projectfeatures": [
-                "Methodical Responsive Design",
-                "Proficient Use of Bootstrap Framework",
-                "Static Representation Embodying chipotle Aesthetic"
-            ],
-            "projectsstacks":[
-                "html",
-                "css",
-                "Bootstrap"
-            ]
-        },
-        {
-            "projectTitle": "podia web clone",
-            "projectimgSrc": "images/projects-img/Mainprojects/Podia-clone.jpg",
-            "githubrepo": "https://github.com/Dele2009/html-css-bootstrap",
-            "projectlink": "https://html-css-bootstrap-seven.vercel.app/podia.html",
-            "projectfeatures": [
-                "Simple and Effective Responsive Design",
-                "Thoughtful Bootstrap Component Implementation",
-                "Static Exhibition of Podia's Design Principles"
-            ],
-            "projectsstacks":[
-                "html",
-                "css",
-                "Bootstrap"
-               
-            ]
-        }
-    ],
-    "js_projects":[
-        {
-            "projectTitle": "task manager app",
-            "projectimgSrc": "images/projects-img/Mainprojects/task-app.jpg",
-            "githubrepo": "https://github.com/Dele2009/jav",
-            "projectlink": "https://jav-teal.vercel.app/time-manager.html",
-            "projectfeatures": [
-                "Streamlined design ensuring smooth task management on various devices.",
-                "Seamless use of Bootstrap components for consistent and user-friendly task organization",
-                "Implementation of JavaScript for interactive and dynamic task management."
-            ],
-            "projectsstacks":[
-                "html",
-                "css",
-                "Bootstrap",
-                "Vanilla JavaScript"
-            ]
-        },
-        {
-            "projectTitle": "Taxi System App",
-            "projectimgSrc": "images/projects-img/Mainprojects/uber app.jpg",
-            "githubrepo": "https://github.com/Dele2009/jav",
-            "projectlink": "https://jav-teal.vercel.app/uber.html",
-            "projectfeatures": [
-                "Responsive layout for a smooth and intuitive navigation experience.",
-                "Skillful use of Bootstrap elements to replicate the organized functionality of the Uber System App.",
-                "Utilization of JavaScript for interactive user-friendly interface."
-            ],
-            "projectsstacks":[
-                "html",
-                "css",
-                "Bootstrap",
-                "Vanilla JavaScript"
-            ]
-        },
-        {
-            "projectTitle": "Hotel Booking App",
-            "projectimgSrc": "images/projects-img/Mainprojects/hotel app.jpg",
-            "githubrepo": "https://github.com/Dele2009/jav",
-            "projectlink": "https://jav-teal.vercel.app/HOTEL_APP.html",
-            "projectfeatures": [
-                "Design with responsiveness to ensure a pleasant user experience in hotel room reservations.",
-                "Integration of JavaScript for dynamic search, date selection, and room reservation interactions.",
-                "Enhance user interactions and elevate the overall booking experience."
-            ],
-            "projectsstacks":[
-                "html",
-                "css",
-                "Bootstrap",
-                "Vanilla JavaScript"
-            ]
-        }
-    ]
-}
+[
+    {
+        "projectTitle": "aptible web clone",
+        "projectimgSrc": "images/projects-img/Mainprojects/Aptible-clone.jpg",
+        "githubrepo": "https://github.com/Dele2009/html-css-bootstrap",
+        "projectlink": "https://html-css-bootstrap-seven.vercel.app/Aptible.html",
+        "projectfeatures": [
+            "Clean and Precise Responsive Design",
+            "Bootstrap Integration for Consistency",
+            "Static Reflection of Aptible's Aesthetic"
+        ],
+        "projectsstacks": [
+            "html",
+            "css",
+            "Bootstrap",
+            "JavaScript"
+        ]
+    },
+    {
+        "projectTitle": "chipotle web clone",
+        "projectimgSrc": "images/projects-img/Mainprojects/chipotle clone.jpg",
+        "githubrepo": "https://github.com/Dele2009/html-css-bootstrap",
+        "projectlink": "https://html-css-bootstrap-seven.vercel.app/chipotle.html",
+        "projectfeatures": [
+            "Methodical Responsive Design",
+            "Proficient Use of Bootstrap Framework",
+            "Static Representation Embodying chipotle Aesthetic"
+        ],
+        "projectsstacks": [
+            "html",
+            "css",
+            "Bootstrap"
+        ]
+    },
+    {
+        "projectTitle": "podia web clone",
+        "projectimgSrc": "images/projects-img/Mainprojects/Podia-clone.jpg",
+        "githubrepo": "https://github.com/Dele2009/html-css-bootstrap",
+        "projectlink": "https://html-css-bootstrap-seven.vercel.app/podia.html",
+        "projectfeatures": [
+            "Simple and Effective Responsive Design",
+            "Thoughtful Bootstrap Component Implementation",
+            "Static Exhibition of Podia's Design Principles"
+        ],
+        "projectsstacks": [
+            "html",
+            "css",
+            "Bootstrap"
+        ]
+    },
+    {
+        "projectTitle": "task manager app",
+        "projectimgSrc": "images/projects-img/Mainprojects/task-app.jpg",
+        "githubrepo": "https://github.com/Dele2009/jav",
+        "projectlink": "https://jav-teal.vercel.app/time-manager.html",
+        "projectfeatures": [
+            "Streamlined design ensuring smooth task management on various devices.",
+            "Seamless use of Bootstrap components for consistent and user-friendly task organization",
+            "Implementation of JavaScript for interactive and dynamic task management."
+        ],
+        "projectsstacks": [
+            "html",
+            "css",
+            "Bootstrap",
+            "JavaScript"
+        ]
+    },
+    {
+        "projectTitle": "Maxblogs Blogging App",
+        "projectimgSrc": "/images/projects-img/Mainprojects/maxblogs.jpg",
+        "githubrepo": "https://github.com/Dele2009/Maxblogs",
+        "projectlink": "https://maxblogs-online.vercel.app",
+        "projectfeatures": [
+            "Design with responsiveness to ensure a pleasant user experience in hotel room reservations.",
+            "Integration of JavaScript for dynamic search, date selection, and room reservation interactions.",
+            "Enhance user interactions and elevate the overall booking experience."
+        ],
+        "projectsstacks": [
+            "Html",
+            "Ejs",
+            "Nodejs",
+            "Expressjs",
+            "Bootstrap",
+            "JavaScript",
+            "MongoDB",
+            "Google Api"
+        ]
+    },
+    {
+        "projectTitle": "Taxi System App",
+        "projectimgSrc": "images/projects-img/Mainprojects/uber app.jpg",
+        "githubrepo": "https://github.com/Dele2009/jav",
+        "projectlink": "https://jav-teal.vercel.app/uber.html",
+        "projectfeatures": [
+            "Responsive layout for a smooth and intuitive navigation experience.",
+            "Skillful use of Bootstrap elements to replicate the organized functionality of the Uber System App.",
+            "Utilization of JavaScript for interactive user-friendly interface."
+        ],
+        "projectsstacks": [
+            "html",
+            "css",
+            "Bootstrap",
+            "JavaScript"
+        ]
+    },
+    {
+        "projectTitle": "Hotel Booking App",
+        "projectimgSrc": "images/projects-img/Mainprojects/hotel app.jpg",
+        "githubrepo": "https://github.com/Dele2009/jav",
+        "projectlink": "https://jav-teal.vercel.app/HOTEL_APP.html",
+        "projectfeatures": [
+            "Design with responsiveness to ensure a pleasant user experience in hotel room reservations.",
+            "Integration of JavaScript for dynamic search, date selection, and room reservation interactions.",
+            "Enhance user interactions and elevate the overall booking experience."
+        ],
+        "projectsstacks": [
+            "html",
+            "css",
+            "Bootstrap",
+            "JavaScript"
+        ]
+    }
+]
