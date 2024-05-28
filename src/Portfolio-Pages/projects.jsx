@@ -3,7 +3,7 @@ import git_icon from '../port-img/github.svg'
 import view_icon from '../port-img/view.svg'
 
 import React, { useState, useEffect, useRef } from 'react';
-
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 function Myprojects() {
   //   const basics = projectsinfo.hT_Cs_Btrp_projects
@@ -74,25 +74,39 @@ const Projects = ({
             <div className="position-absolute w-100 h-100 main-nav-hover rounded-3">
               <div className='w-100 h-100 d-flex flex-column flex-sm-row justify-content-center align-items-center'>
                 {githubrepo &&
-                  <a
-                    className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light m-3'
-                    href={githubrepo}
-                    target='_blank'
+                  <OverlayTrigger
+                    placement="top"
+                    overlay={<Tooltip id="button-tooltip">Github Repo</Tooltip>}
                   >
-                    <img src={git_icon} alt="github_icon" className='me-2' />
-                    <i>Github</i>
-                  </a>
+                    <a
+                      className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light m-3 btn-slide'
+                      href={githubrepo}
+                      target='_blank'
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Default tooltip"
+                    >
+                      <img src={git_icon} alt="github_icon" className='' />
+                      {/* <i>Github</i> */}
+                    </a>
+                  </OverlayTrigger>
                 }
 
                 {projectlink &&
-                  <a
-                    className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light m-3'
-                    href={projectlink}
-                    target='_blank'
+                  <OverlayTrigger
+                    placement="top"
+                    overlay={<Tooltip id="button-tooltip">Live Preview</Tooltip>}
                   >
-                    <img src={view_icon} alt="preview_icon" className='me-2' />
-                    <i>Preview</i>
-                  </a>
+                    <a
+                      className='btn fs-5 bg-blue-grad border-0 text-uppercase text-light m-3 btn-slide'
+                      href={projectlink}
+                      target='_blank'
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Default tooltip"
+                    >
+                      <img src={view_icon} alt="preview_icon" className='' />
+                      {/* <i>Preview</i> */}
+                    </a>
+                  </OverlayTrigger>
                 }
 
               </div>
@@ -136,7 +150,7 @@ const Projects = ({
 
           <div ref={testlength} style={show ? null : trucateText} className='row m-auto rounded-bottom-4 text-uppercase w-100 h-100'>
             {projectsstacks.map((projectsstack, index) => {
-              return <div className='col-3 btn text-light bg-dark m-2 k-to p-1' key={index} style={{ width: 'fit-content' }}># {projectsstack}</div>
+              return <div className='col-3 btn text-light bg-dark m-2 k-to py-1 px-2' key={index} style={{ width: 'fit-content' }}># &nbsp;{projectsstack}</div>
             })}
           </div>
 

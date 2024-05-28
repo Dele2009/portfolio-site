@@ -19,14 +19,37 @@ body {
 .main-nav {
   background: #3F3D56 !important;
 }
-.shadow-pro{
+
+.shadow-pro {
   box-shadow: 0px 0px 10px #c2c2c2 !important;
   transition: box-shadow 300ms 0s ease-in-out;
 
-  &:hover{
+  &:hover {
     box-shadow: 0px 0px 20px #909090 !important;
   }
 }
+
+/* .btn-slide{
+  width: 70px !important;
+} */
+/* .btn-slide {
+  & i {
+    display: none;
+    transition: display 300ms 0s ease-in-out;
+  }
+  & img{
+    margin-right: 0px;
+  }
+  &:hover{
+    & i{
+      display: inline;
+    }
+    & img{
+      margin-right: 5px;
+    }
+  
+  }
+} */
 
 .main-nav-hover {
   background: transparent;
@@ -38,12 +61,24 @@ body {
     width: fit-content;
     height: fit-content;
 
-    &>img {
+    & img {
       width: 25px;
       height: 25px;
     }
-    & > i{
+
+    & i {
       font-size: 15px;
+      visibility: hidden;
+      position: absolute;
+      /* transition: visibility s 0s ease, position 300ms 0s ease; */
+    }
+    &:hover{
+      & i{
+        visibility: visible;
+        position: relative;
+      }
+     
+    
     }
   }
 
