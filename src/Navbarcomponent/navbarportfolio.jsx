@@ -9,16 +9,32 @@ import { NavHashLink } from 'react-router-hash-link'
 import { HiMenu } from 'react-icons/hi'
 import { BsGithub, BsWhatsapp, BsLinkedin } from 'react-icons/bs'
 import { IconContext } from 'react-icons'
+import { motion } from 'framer-motion'
 
-function Mainportfolionavbar () {
+function Mainportfolionavbar() {
   return (
     <>
-      <Navbar expand='lg' className='main-nav px-lg-5' fixed='top'>
+    <motion.div
+    initial={{ y: "-300vh" }}
+    animate={{ y: 0 }}
+    transition={{ duration: 2 }}
+
+    className='position-fixed top-0 w-100 '
+    style={{zIndex: 3000}}
+    >
+      <Navbar
+        expand='lg'
+        className='main-nav px-lg-5'
+
+        
+      >
         <Container fluid>
           <Navbar.Brand as={Link} to='/' className='fs-3'>
             <code className='text-light'>
-              D.<span className='trans-back drop-shadow'>append(</span>aminu
-              <span className='trans-back drop-shadow'>)</span>
+              {/* D.<span className='trans-back drop-shadow'>append(</span>aminu
+              <span className='trans-back drop-shadow'>)</span> */}
+              <span className='trans-back drop-shadow fs-1'>{'<'}</span>D.aminu
+              <span className='trans-back drop-shadow fs-1'>{'/>'}</span>
             </code>
           </Navbar.Brand>
 
@@ -105,6 +121,7 @@ function Mainportfolionavbar () {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      </motion.div>
     </>
   )
 }

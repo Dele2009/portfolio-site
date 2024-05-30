@@ -12,9 +12,9 @@ function Homepage () {
 
   return (
     <>
-      <Zoom delay={10}>
+      {/* <Zoom delay={10}> */}
         <Intro />
-      </Zoom>
+      {/* </Zoom> */}
 
       <Zoom delay={10}>
         <Aboutme />

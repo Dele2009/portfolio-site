@@ -2,9 +2,11 @@ import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import hero from '../port-img/heros.svg';
 import webInfo from '../webvalues.json';
+import { motion } from 'framer-motion'
 
 
-function Intro () {
+
+function Intro() {
   const position = useRef(null)
 
   useEffect(() => {
@@ -34,8 +36,12 @@ function Intro () {
         id='hero-section'
       >
         <div className='container'>
-          <div className='row fullscreen d-flex align-items-center gap-5 gap-md-0 justify-content-between flex-lg-row flex-column-reverse'>
-            <div className='col-lg col-md mb-md-0 mb-5'>
+          <div className='row fullscreen d-flex align-items-center gap-5 gap-md-3 justify-content-between flex-lg-row flex-column-reverse'>
+            <motion.div className='col-lg col-md mb-md-0 mb-5'
+              initial={{ x: '-300vw' }}
+              animate={{ x: 0 }}
+              transition={{delay: 1,duration: 2, type: 'spring'}}
+            >
               <h6 className='fs-4'>Hello, there! 👋</h6>
               <h1 className='fs-2'>I'm Dele Aminu</h1>
               <h1 className='fs-2 trans-back'>
@@ -49,17 +55,29 @@ function Intro () {
                 aesthetically pleasing.
               </p>
 
-              <a
-                href={Resume}
-                target='_blank'
-                className=' btn bg-blue-grad border-0 text-uppercase text-light'
+              <motion.div
+                initial={{ x: '-300vw' }}
+                animate={{ x: 0 }}
+                transition={{delay: 1.5,duration: 2, type: 'spring'}}
               >
-                Download resume
-              </a>
-            </div>
-            <div className='col-lg col-md'>
+                <a
+
+                  href={Resume}
+                  target='_blank'
+                  className=' btn bg-blue-grad border-0 text-uppercase text-light'
+                >
+                  Download resume
+                </a>
+              </motion.div>
+
+            </motion.div>
+            <motion.div className='col-lg col-md'
+             initial={{ y: '-300vh' }}
+             animate={{ y: 0 }}
+             transition={{delay: 1,duration: 2, type: 'spring'}}
+            >
               <img className='img-fluid' src={hero} alt='' />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -4,17 +4,23 @@ import view_icon from '../port-img/view.svg'
 
 import React, { useState, useEffect, useRef } from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { motion } from 'framer-motion'
+import { Scrollup } from '../animatescroll'
 
 function Myprojects() {
   //   const basics = projectsinfo.hT_Cs_Btrp_projects
   //   const javs = projectsinfo.js_projects
   //   const nodes = projectsinfo.node_projects
+  // useEffect(()=>{
+    Scrollup()
+
+  // },[])
   return (
     <>
       <article className='row p-3'>
         {projectsinfo &&
           projectsinfo.map((proj, index) => {
-            return <Projects key={index} {...proj} />
+            return <Projects key={index} {...proj} index={index} />
           })}
       </article>
 
@@ -41,7 +47,8 @@ const Projects = ({
   githubrepo,
   projectlink,
   projectfeatures,
-  projectsstacks
+  projectsstacks,
+  index
 }) => {
   const [show, setShow] = useState(false);
   const [showButton, setShowButton] = useState(false);
@@ -68,7 +75,12 @@ const Projects = ({
 
   return (
     <>
-      <section className='col-md-4 pb-5 px-md-5'>
+      <motion.section
+        className='col-md-4 pb-5 px-md-5'
+        initial={{opacity: 0, transform: 'scale(0.2)'}}
+        animate={{opacity: 1,  transform: 'scale(1)'}}
+        transition={{delay: index - 1, duration: .2,type: 'spring'}}
+      >
         <div className='w-100'>
           <div className='w-100  rounded-4 position-relative shadow-pro' style={{ height: '300px' }}>
             <div className="position-absolute w-100 h-100 main-nav-hover rounded-3">
@@ -115,6 +127,7 @@ const Projects = ({
               src={projectimgSrc}
               alt='project-pic'
               className='w-100 h-100 rounded-3'
+              loading='lazy'
             />
           </div>
           <div className='main-na'>
@@ -162,7 +175,7 @@ const Projects = ({
             </div>
           }
         </div>
-      </section>
+      </motion.section>
     </>
   )
 }

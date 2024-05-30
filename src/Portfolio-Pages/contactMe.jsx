@@ -3,6 +3,7 @@ import contact from '../port-img/contact-logo.svg'
 import { Button, Col, Form, Row } from 'react-bootstrap'
 import webinfo from '../webvalues.json'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 // import { sendEmail } from '../api'
 
 
@@ -121,14 +122,26 @@ function ContactMe() {
         id='hero-section'
       >
         <div className='container'>
-          <div>
+          <motion.div
+           initial={{y: "-300vh"}}
+           animate={{y: 0}}
+           transition={{duration: 2}}
+          >
             <p className=' fs-1 code-style text-center'>Contact Me</p>
-          </div>
+          </motion.div>
           <div className='row fullscreen d-flex align-items-center gap-5  justify-content-between'>
-            <div className='col-lg'>
+            <motion.div className='col-lg'
+              initial={{x: "-300vw"}}
+              animate={{x: 0}}
+              transition={{duration: 2}}
+            >
               <img className='img-fluid' src={contact} alt='contact-logo' />
-            </div>
-            <div className='p-3 p-lg-0 col-lg'>
+            </motion.div>
+            <motion.div className='p-3 p-lg-0 col-lg'
+             initial={{x: "300vw"}}
+             animate={{x: 0}}
+             transition={{duration: 2}}
+            >
               <div className=' mb-md-0 mb-5 main-nav text-light p-4 p-lg-5 rounded-5'>
                 <Form onSubmit={handle_submit}>
                   <Row className='mb-3'>
@@ -240,7 +253,7 @@ function ContactMe() {
                   </Button>
                 </Form>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
