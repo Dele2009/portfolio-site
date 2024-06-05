@@ -33,7 +33,7 @@ function Skills () {
   return (
     <>
       <section
-        className='section-h d-flex justify-content-center align-items-center'
+        className='section-h d-flex justify-content-center align-items-center vh-lg-100'
         id='skills-section'
       >
         <div className='col-10'>

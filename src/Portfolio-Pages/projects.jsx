@@ -17,7 +17,7 @@ function Myprojects() {
   // },[])
   return (
     <>
-      <article className='row p-3'>
+      <article className='row p-3' style={{marginTop: '8rem'}}>
         {projectsinfo &&
           projectsinfo.map((proj, index) => {
             return <Projects key={index} {...proj} index={index} />
@@ -76,15 +76,15 @@ const Projects = ({
   return (
     <>
       <motion.section
-        className='col-md-4 pb-5 px-md-5'
+        className='col-md-4 pb-5 mb-5 px-md-5'
         initial={{opacity: 0, transform: 'scale(0.2)'}}
-        animate={{opacity: 1,  transform: 'scale(1)'}}
-        transition={{delay: index - 1, duration: .2,type: 'spring'}}
+        whileInView={{opacity: 1,  transform: 'scale(1)'}}
+        transition={{delay: 0.8, duration: .2,type: 'spring'}}
       >
         <div className='w-100'>
           <div className='w-100  rounded-4 position-relative shadow-pro' style={{ height: '300px' }}>
             <div className="position-absolute w-100 h-100 main-nav-hover rounded-3">
-              <div className='w-100 h-100 d-flex flex-column flex-sm-row justify-content-center align-items-center'>
+              <div className='w-100 h-100 d-flex justify-content-center align-items-center'>
                 {githubrepo &&
                   <OverlayTrigger
                     placement="top"

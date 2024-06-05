@@ -18,7 +18,7 @@ export const Slider = () => {
   return (
     <>
       <section
-        className='section-h d-flex align-items-center justify-content-center'
+        className='section-h d-flex align-items-center justify-content-center vh-lg-100 mt-5'
         id='works-section'
       >
         <div className='w-100'>

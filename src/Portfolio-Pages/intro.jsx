@@ -2,12 +2,14 @@ import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import hero from '../port-img/heros.svg';
 import webInfo from '../webvalues.json';
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 
 
 
 function Intro() {
   const position = useRef(null)
+  const refs= useRef(null)
+  const isInView = useInView(refs)
 
   useEffect(() => {
     const typed = new Typed(position.current, {
@@ -32,15 +34,15 @@ function Intro() {
   return (
     <>
       <section
-        className='section-h d-flex align-items-center justify-content-center colp main-bg'
+        className='section-h d-flex align-items-center justify-content-center colp main-bg vh-lg-100'
         id='hero-section'
       >
-        <div className='container'>
+        <div className='container' ref={refs}>
           <div className='row fullscreen d-flex align-items-center gap-5 gap-md-3 justify-content-between flex-lg-row flex-column-reverse'>
             <motion.div className='col-lg col-md mb-md-0 mb-5'
-              initial={{ x: '-300vw' }}
-              animate={{ x: 0 }}
-              transition={{delay: 1,duration: 2, type: 'spring'}}
+              // initial={{ x: '-300vw' }}
+              animate={{ x: isInView? 0 : '-300vw'}}
+              transition={{delay: 0.9,duration: 2, type: 'spring'}}
             >
               <h6 className='fs-4'>Hello, there! 👋</h6>
               <h1 className='fs-2'>I'm Dele Aminu</h1>
@@ -56,8 +58,8 @@ function Intro() {
               </p>
 
               <motion.div
-                initial={{ x: '-300vw' }}
-                animate={{ x: 0 }}
+                // initial={{ x: '-300vw' }}
+                animate={{ x: isInView? 0 : '-300vw' }}
                 transition={{delay: 1.5,duration: 2, type: 'spring'}}
               >
                 <a
@@ -72,8 +74,8 @@ function Intro() {
 
             </motion.div>
             <motion.div className='col-lg col-md'
-             initial={{ y: '-300vh' }}
-             animate={{ y: 0 }}
+            //  initial={{ y: '-300vh' }}
+             animate={{ y: isInView ? 0 : '-300vh' }}
              transition={{delay: 1,duration: 2, type: 'spring'}}
             >
               <img className='img-fluid' src={hero} alt='' />

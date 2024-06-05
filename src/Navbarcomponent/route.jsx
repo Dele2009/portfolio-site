@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom'
 import Mainportfolionavbar from './navbarportfolio'
 
-export default function Navroot () {
+export default function Navroot ({activeLink, HandleLinkClick}) {
   return (
     <>
-      <Mainportfolionavbar />
+      <Mainportfolionavbar activeLink={activeLink} HandleLinkClick={HandleLinkClick} />
       <Outlet/>
     </>
   )

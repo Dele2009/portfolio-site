@@ -104,6 +104,23 @@
         ]
     },
     {
+        "projectTitle": "Password Generator Web App",
+        "projectimgSrc": "/images/projects-img/Mainprojects/geneartepassword.jpg",
+        "githubrepo": "https://github.com/Dele2009/jav",
+        "projectlink": "https://jav-teal.vercel.app/passwordgenerate.html",
+        "projectfeatures": [
+            "Responsive layout for a smooth and intuitive navigation experience.",
+            "Skillful use of Bootstrap elements to replicate the organized functionality of the Uber System App.",
+            "Utilization of JavaScript for interactive user-friendly interface."
+        ],
+        "projectsstacks": [
+            "html",
+            "css",
+            "Bootstrap",
+            "JavaScript"
+        ]
+    },
+    {
         "projectTitle": "Hotel Booking App",
         "projectimgSrc": "images/projects-img/Mainprojects/hotel app.jpg",
         "githubrepo": "https://github.com/Dele2009/jav",

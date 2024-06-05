@@ -1,23 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import me from '../port-img/about-me.svg'
 import { Modal, Button } from 'react-bootstrap'
+import { motion, useInView } from 'framer-motion'
 
-function Aboutme () {
+function Aboutme() {
   const [show, setShow] = useState(false)
+  const sectionInView = useRef(null)
+  const isInView = useInView(sectionInView)
   return (
     <section
-      className='section-h d-flex align-items-center justify-content-center colp '
+      className='section-h d-flex align-items-center justify-content-center colp vh-lg-100'
       id='about-section'
     >
-      <div className='container'>
+      <div ref={sectionInView} className='container'>
         <div className=''>
           <h2 className='pb-3 fs-1 code-style text-center'>About me</h2>
         </div>
         <div className='row align-items-center gap-5 justify-content-between'>
-          <div className='col-lg-5'>
+          <motion.div className='col-lg-5'
+           
+           animate={{ x: isInView ? 0 : '-300vw' }}
+             transition={{delay: 0.2,duration: 2, type: 'spring'}}
+          >
             <img className='img-fluid' src={me} alt='about-logo' />
-          </div>
-          <div className='col-lg-5'>
+          </motion.div>
+          <motion.div className='col-lg-5'
+            animate={{ x: isInView? 0 : '300vw'}}
+            transition={{delay: 0.2,duration: 2, type: 'spring'}}
+          >
             <h1 className='text-uppercase trans-back'>Personal Details</h1>
             <p className='fs-5'>
               You'll often find me immersed in the world of HTML, CSS, and
@@ -27,12 +37,18 @@ function Aboutme () {
             </p>
 
             {/* modal to this to display more infomation*/}
-            <Button
-              className='btn border-0 bg-blue-grad text-uppercase text-light'
-              onClick={() => setShow(true)}
+            <motion.div
+              animate={{ x: isInView? 0 : '300vw' }}
+              transition={{delay: 0.75,duration: 2, type: 'spring'}}
             >
-              View Full Details
-            </Button>
+              <Button
+                className='btn border-0 bg-blue-grad text-uppercase text-light'
+                onClick={() => setShow(true)}
+              >
+                View Full Details
+              </Button>
+            </motion.div>
+
             <Modal
               show={show}
               onHide={() => setShow(false)}
@@ -40,7 +56,8 @@ function Aboutme () {
               fullscreen='md-down'
               aria-labelledby='contained-modal-title-vcenter'
               centered
-              
+              style={{ zIndex: '5000' }}
+
             >
               <Modal.Header closeButton className='main-nav border-0'>
                 <Modal.Title id='contained-modal-title-vcenter'>
@@ -102,7 +119,7 @@ function Aboutme () {
                 </div>
               </Modal.Body>
             </Modal>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -10,11 +10,66 @@ html {
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-  padding-top: 150px;
+  padding-top: 70px;
 
+  background: linear-gradient(to bottom right, rgb(63, 61, 86), rgba(40, 234, 255, 0.7), rgba(107, 99, 255, 0.5), #5144d6),
+   
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 49px,
+      rgb(63, 61, 86, 0.1) 50px,
+      rgba(53, 10, 88, 0.01) 51px),
+    repeating-linear-gradient(90deg,
+      transparent,
+      transparent 49px,
+      rgb(63, 61, 86, 0.1) 50px,
+      rgba(53, 10, 88, 0.01) 51px);
+  /* Ensure the background covers the entire area */
+  background-size: cover;
+  background-attachment: fixed;
+
+  height: 100vh;
+  margin: 0;
+
+  /* animation: bg-move 10s ease 0s infinite forwards; */
 
 
 }
+
+
+
+@keyframes bg-move {
+  from {
+    background: linear-gradient(to bottom right, rgba(61, 223, 240, 0.7), rgba(21, 15, 124, 0.7)),
+      /* Grid pattern */
+      repeating-linear-gradient(0deg,
+        transparent,
+        transparent 49px,
+        rgba(0, 0, 0, 0.03) 50px,
+        rgba(0, 0, 0, 0) 51px),
+      repeating-linear-gradient(90deg,
+        transparent,
+        transparent 49px,
+        rgba(0, 0, 0, 0) 50px,
+        rgba(0, 0, 0, 0.03) 51px);
+  }
+
+  to {
+    background: linear-gradient(to bottom right, rgba(118, 241, 255, 0.5), rgba(67, 58, 234, 0.5)),
+      /* Grid pattern */
+      repeating-linear-gradient(0deg,
+        transparent,
+        transparent 49px,
+        rgba(0, 0, 0, 0.03) 50px,
+        rgba(0, 0, 0, 0) 51px),
+      repeating-linear-gradient(90deg,
+        transparent,
+        transparent 49px,
+        rgba(0, 0, 0, 0) 50px,
+        rgba(0, 0, 0, 0.03) 51px);
+  }
+}
+
 
 .main-nav {
   background: #3F3D56 !important;
@@ -28,6 +83,13 @@ body {
     box-shadow: 0px 0px 20px #909090 !important;
   }
 }
+
+/* @media (min-width:992px) {
+  .icons{
+    width: 100%;
+  }
+} */
+
 
 /* .btn-slide{
   width: 70px !important;
@@ -62,8 +124,8 @@ body {
     height: fit-content;
 
     & img {
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
     }
 
     & i {
@@ -72,13 +134,14 @@ body {
       position: absolute;
       /* transition: visibility s 0s ease, position 300ms 0s ease; */
     }
-    &:hover{
-      & i{
+
+    &:hover {
+      & i {
         visibility: visible;
         position: relative;
       }
-     
-    
+
+
     }
   }
 
@@ -120,35 +183,90 @@ body {
 
 .trans-back {
   background-clip: text !important;
-  background: linear-gradient(to left, rgb(47, 228, 249), rgb(108, 99, 255)) !important;
+  background: linear-gradient(to left, rgb(15, 176, 194), rgb(108, 99, 255)) !important;
   width: fit-content !important;
   color: transparent !important;
   -webkit-background-clip: text !important;
+}
+
+.navtext {
+  & svg {
+    color: white;
+  }
+
+  & .tp {
+    color: white !important
+  }
+}
+
+.navtext:hover {
+  & svg{
+    color:rgb(108, 99, 255) !important;
+    filter: drop-shadow(0px 0px 10px rgb(133, 243, 255));
+
+  }
+  & .tp {
+    background-clip: text !important;
+    background: linear-gradient(to left, rgb(15, 176, 194), rgb(108, 99, 255)) !important;
+    width: fit-content !important;
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+  }
+}
+
+.navlink {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+
+  & svg{
+    font-size: 18px !important;
+
+  }
+
+}
+
+.navLinkActive {
+  & svg {
+    color:rgb(108, 99, 255) !important;
+
+    /* color: rgb(87, 233, 250) !important; */
+    filter: drop-shadow(0px 0px 10px rgb(133, 243, 255));
+  }
 }
 
 .drop-shadow {
   filter: drop-shadow(0px 0px 10px rgb(0, 229, 255));
 }
 
+
+
 .color-mix {
   color: rgb(27, 181, 198) !important;
-  width: 35px !important;
-  height: 35px !important;
+  /* width: 35px !important;
+  height: 35px !important; */
   filter: drop-shadow(0px 0px 10px rgb(0, 229, 255));
+}
 
+.icons {
+  color: white !important;
+}
 
-
+.icons:hover {
+  color: rgb(87, 233, 250) !important;
+  filter: drop-shadow(0px 0px 10px rgb(0, 229, 255));
 }
 
 .section-h {
   height: fit-content;
   margin: 0px 0px 200px 0px !important;
-
 }
 
 .body-port {
 
-  background: white;
+  background: transparent;
   overflow-x: hidden;
 }
 
@@ -168,6 +286,10 @@ body {
   .max-h2 {
     max-height: 70%;
     margin: 0px auto;
+  }
+
+  .vh-lg-100 {
+    height: 100dvh !important;
   }
 }
 
@@ -430,26 +552,4 @@ body {
     margin: 0px 0px 120px 0px !important;
 
   }
-}
-
-@media (min-width:600px) and (max-width:800px) {
-  .main-div {
-
-    grid-template-columns: repeat(2, 2fr);
-
-  }
-}
-
-@media (max-width:585px) {
-  .nav-bar {
-    z-index: 400;
-    top: 0;
-  }
-
-  .main-div {
-
-    grid-template-columns: repeat(1, 1fr);
-
-  }
-
 }

@@ -118,8 +118,7 @@ function ContactMe() {
   return (
     <>
       <section
-        className='d-flex align-items-center justify-content-center'
-        id='hero-section'
+        className='d-flex align-items-center justify-content-center vh-lg-100'
       >
         <div className='container'>
           <motion.div
