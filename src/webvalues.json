@@ -33,7 +33,7 @@
         {
             "skill": "Json",
             "skillLogo": "images/json-file-svgrepo-com.svg",
-            "skillLength": 80           
+            "skillLength": 80
         },
         {
             "skill": "Git",
@@ -112,5 +112,147 @@
         "Taraba",
         "Yobe",
         "Zamfara"
+    ],
+    "services": [
+        {
+            "title": "Web Development",
+            "description": "Professional web development services to build high-quality, responsive websites tailored to your needs.",
+            "linkText": "Know more",
+            "imgSrc": "https://tailus.io/sources/blocks/end-image/preview/images/graphic.svg",
+            "imgAlt": "illustration",
+            "imgWidth": "900",
+            "imgHeight": "600"
+        },
+        {
+            "title": "SEO Optimization",
+            "description": "Expert SEO services to improve your website's visibility and ranking on search engines.",
+            "linkText": "Know more",
+            "imgSrc": "https://tailus.io/sources/blocks/end-image/preview/images/graphic.svg",
+            "imgAlt": "illustration",
+            "imgWidth": "900",
+            "imgHeight": "600"
+        },
+        {
+            "title": "UI Design",
+            "description": "Creative UI design services to create visually appealing and user-friendly interfaces.",
+            "linkText": "Know more",
+            "imgSrc": "https://tailus.io/sources/blocks/end-image/preview/images/ui-design.svg",
+            "imgAlt": "illustration",
+            "imgWidth": "900",
+            "imgHeight": "600"
+        },
+        {
+            "title": "UX Design",
+            "description": "Comprehensive UX design services to enhance user experience and engagement on your website.",
+            "linkText": "Know more",
+            "imgSrc": "https://tailus.io/sources/blocks/end-image/preview/images/ux-design.svg",
+            "imgAlt": "illustration",
+            "imgWidth": "900",
+            "imgHeight": "600"
+        }
+    ],
+    "pricing": [
+        {
+            "planName": "Basic Plan",
+            "price": "$499",
+            "period": "/ project",
+            "description": "Ideal for small websites and personal projects.",
+            "features": [
+                {
+                    "name": "5 Pages",
+                    "isInclude": true
+                },
+                {
+                    "name": "Basic SEO",
+                    "isInclude": true
+                },
+                {
+                    "name": "Responsive Design",
+                    "isInclude": true
+                },
+                {
+                    "name": "1 Months Support",
+                    "isInclude": true
+                },
+                {
+                    "name": "CMS & E-commerce Integration",
+                    "isInclude": false
+                },
+                {
+                    "name": "Custom Features",
+                    "isInclude": false
+                }
+            ],
+            "buttonText": "Choose Basic Plan",
+            "buttonLink": "javascript:void(0)"
+        },
+        {
+            "planName": "Standard Plan",
+            "price": "$999",
+            "period": "/ project",
+            "description": "Perfect for medium-sized businesses and projects.",
+            "features": [
+                {
+                    "name": "10 Pages",
+                    "isInclude": true
+                },
+                {
+                    "name": "Advanced SEO",
+                    "isInclude": true
+                },
+                {
+                    "name": "Responsive Design",
+                    "isInclude": true
+                },
+                {
+                    "name": "3 Months Support",
+                    "isInclude": true
+                },
+                {
+                    "name": "CMS & E-commerce Integration",
+                    "isInclude": false
+                },
+                {
+                    "name": "Custom Features",
+                    "isInclude": false
+                }
+            ],
+            "buttonText": "Choose Standard Plan",
+            "buttonLink": "javascript:void(0)"
+        },
+        {
+            "planName": "Premium Plan",
+            "price": "$1999",
+            "period": "/ project",
+            "description": "Best for large businesses and complex projects.",
+            "features": [
+                {
+                    "name": "Unlimited Pages",
+                    "isInclude": true
+                },
+                {
+                    "name": "Premium SEO",
+                    "isInclude": true
+                },
+                {
+                    "name": "Responsive Design",
+                    "isInclude": true
+                },
+                {
+                    "name": "3 Months Support",
+                    "isInclude": true
+                },
+                {
+                    "name": "CMS & E-commerce Integration",
+                    "isInclude": true
+                },
+                {
+                    "name": "Custom Features",
+                    "isInclude": true
+                }
+            ],
+            "buttonText": "Choose Premium Plan",
+            "buttonLink": "javascript:void(0)"
+        }
     ]
 }

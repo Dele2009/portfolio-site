@@ -17,7 +17,10 @@ import {
   BsPersonFill,
   BsCardChecklist,
   BsCodeSquare,
-  BsTelephoneFill
+  BsTelephoneFill,
+  BsGearFill,
+  BsTools,
+  BsGearWideConnected
 } from 'react-icons/bs'
 import { IconContext } from 'react-icons'
 import { motion } from 'framer-motion'
@@ -86,7 +89,7 @@ function Mainportfolionavbar({ activeLink, HandleLinkClick }) {
                   aria-controls='navbarScroll'
                   onClick={
                     () => {
-                      ;
+                      
                       setActive(!active);
                     }
                   }
@@ -149,6 +152,22 @@ function Mainportfolionavbar({ activeLink, HandleLinkClick }) {
                 >
                   <div className='navlink' style={{ width: 'fit-content' }}>
                     < BsCardChecklist /> <span className='tp'>Skills</span>
+                  </div>
+                </Nav.Link>
+                <Nav.Link
+                  className={activeLink === '/my_services' ? 'trans-back navLinkActive' : 'navtext'}
+                  as={NavHashLink}
+                  to='/my_services'
+                  onClick={
+                    () => {
+                      Scrollup();
+                      HandleLinkClick('/my_services');
+                      setActive(true);
+                    }
+                  }
+                >
+                  <div className='navlink' style={{ width: 'fit-content' }}>
+                    < BsTools /> <span className='tp'>Services</span>
                   </div>
                 </Nav.Link>
                 {/* <Nav.Link

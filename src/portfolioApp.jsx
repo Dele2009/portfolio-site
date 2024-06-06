@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { HashRouter as Router,createHashRouter, RouterProvider, Routes, Route, useLocation } from 'react-router-dom';
 
+import { motion, useScroll } from 'framer-motion'
 
 import Homepage from './Portfolio-Pages/Home'
 import Myprojects from './Portfolio-Pages/projects'
 import ContactMe from './Portfolio-Pages/contactMe'
+import Service from './Portfolio-Pages/services'
 import Errormessage from './Portfolio-Pages/errorPage'
 import Navroot from './Navbarcomponent/route'
 
 const Portfolio = () => {
+  const { scrollYProgress } = useScroll()
+
   const getCurrentPath = () => window.location.hash.substring(1) || '/'
 
   const [activeLink, setActiveLink] = useState(getCurrentPath());
@@ -51,6 +55,11 @@ const Portfolio = () => {
           element: <Homepage  activeLink={activeLink} HandleLinkClick={HandleLinkClick}/>
         },
         {
+          //services path & element
+          path: '/my_services',
+          element: <Service />
+        },
+        {
           //projects path & element
           path: '/projects',
           element: <Myprojects />
@@ -67,8 +76,10 @@ const Portfolio = () => {
   return (
     <div className='body-port'>
       <RouterProvider router={router}/>
-      {/* <Navroot /> */}
-      
+      <motion.div
+        className='progress-scroller main-nav'
+        style={{ scaleX: scrollYProgress }}
+      />
     </div>
   )
 }
