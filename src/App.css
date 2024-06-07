@@ -27,7 +27,7 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
   padding-top: 70px;
 
-  background: linear-gradient(to bottom right, rgb(248, 248, 248) 15% , rgba(126, 119, 255, 0.5), #6456ff),
+  /* background: linear-gradient(to bottom right, rgb(248, 248, 248) 15% , rgba(126, 119, 255, 0.5), #6456ff),
    
     repeating-linear-gradient(0deg,
       transparent,
@@ -39,9 +39,8 @@ body {
       transparent 49px,
       rgb(63, 61, 86, 0.1) 50px,
       rgba(53, 10, 88, 0.01) 51px);
-  /* Ensure the background covers the entire area */
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 
   height: 100vh;
   margin: 0;
@@ -52,6 +51,25 @@ body {
   /* animation: bg-move 10s ease 0s infinite forwards; */
 
 
+}
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, rgb(248, 248, 248) 15% , rgba(126, 119, 255, 0.5), #6456ff),
+              repeating-linear-gradient(0deg,
+                transparent,
+                transparent 49px,
+                rgba(63, 61, 86, 0.1) 50px,
+                rgba(53, 10, 88, 0.01) 51px),
+              repeating-linear-gradient(90deg,
+                transparent,
+                transparent 49px,
+                rgba(63, 61, 86, 0.1) 50px,
+                rgba(53, 10, 88, 0.01) 51px);
+  z-index: -80;
 }
 
 
@@ -88,9 +106,11 @@ body {
   }
 }
 
-
+.default-bg{
+  background: none !important;
+}
 .main-nav {
-  background: #3F3D56 !important;
+  background: none !important;
 }
 
 .shadow-pro {

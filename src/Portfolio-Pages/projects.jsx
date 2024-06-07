@@ -82,7 +82,7 @@ const Projects = ({
         transition={{delay: 0.8, duration: .2,type: 'spring'}}
       >
         <div className='w-100'>
-          <div className='w-100  rounded-4 position-relative shadow-pro' style={{ height: '300px' }}>
+          <div className='w-100  rounded-4 position-relative' style={{ height: '300px' }}>
             <div className="position-absolute w-100 h-100 main-nav-hover rounded-3">
               <div className='w-100 h-100 d-flex justify-content-center align-items-center'>
                 {githubrepo &&
@@ -125,7 +125,7 @@ const Projects = ({
             </div>
             <img
               src={projectimgSrc}
-              alt='project-pic'
+              alt=''
               className='w-100 h-100 rounded-3'
               loading='lazy'
             />

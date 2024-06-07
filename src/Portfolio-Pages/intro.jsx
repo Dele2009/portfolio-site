@@ -42,15 +42,16 @@ function Intro() {
             <motion.div className='col-lg col-md mb-md-0 mb-5'
               // initial={{ x: '-300vw' }}
               animate={{ x: isInView? 0 : '-300vw'}}
-              transition={{delay: 0.9,duration: 2, type: 'spring'}}
+              transition={{delay: 0.9,duration: 2,}}
             >
-              <h6 className='fs-4'>Hello, there! 👋</h6>
-              <h1 className='fs-2'>I'm Dele Aminu</h1>
-              <h1 className='fs-2 trans-back'>
+              <h6 className='fs-4 home-text'>Hello, there! 👋</h6>
+              <h1 className='fs-2 home-text'>I'm Dele Aminu</h1>
+              <h1 className='trans-back hero-font'
+              >
                 <span ref={position} />
               </h1>
 
-              <p className='fs-5'>
+              <p className='fs-5 home-text'>
                 A creative mind in the realm of web development. With a knack
                 for turning ideas into interactive experiences, I'm on a mission
                 to build a digital world that's both functional and
@@ -60,7 +61,7 @@ function Intro() {
               <motion.div
                 // initial={{ x: '-300vw' }}
                 animate={{ x: isInView? 0 : '-300vw' }}
-                transition={{delay: 1.5,duration: 2, type: 'spring'}}
+                transition={{delay: 1.5,duration: 2,}}
               >
                 <a
 
@@ -76,7 +77,7 @@ function Intro() {
             <motion.div className='col-lg col-md'
             //  initial={{ y: '-300vh' }}
              animate={{ y: isInView ? 0 : '-300vh' }}
-             transition={{delay: 1,duration: 2, type: 'spring'}}
+             transition={{delay: 1,duration: 2,}}
             >
               <img className='img-fluid' src={hero} alt='' />
             </motion.div>

@@ -141,7 +141,9 @@ function ContactMe() {
              animate={{x: 0}}
              transition={{duration: 2}}
             >
-              <div className=' mb-md-0 mb-5 main-nav text-light p-4 p-lg-5 rounded-5'>
+              <div className=' mb-md-0 mb-5 bg-drop text-light p-4 p-lg-5 rounded-5'
+                
+              >
                 <Form onSubmit={handle_submit}>
                   <Row className='mb-3'>
                     <Form.Group lg as={Col} controlId='formGridEmail'>

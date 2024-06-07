@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { HashRouter as Router,createHashRouter, RouterProvider, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, createHashRouter, RouterProvider, Routes, Route, useLocation } from 'react-router-dom';
 
 import { motion, useScroll } from 'framer-motion'
 
@@ -9,6 +9,7 @@ import ContactMe from './Portfolio-Pages/contactMe'
 import Service from './Portfolio-Pages/services'
 import Errormessage from './Portfolio-Pages/errorPage'
 import Navroot from './Navbarcomponent/route'
+import Particles from './bgAnimated'
 
 const Portfolio = () => {
   const { scrollYProgress } = useScroll()
@@ -20,15 +21,15 @@ const Portfolio = () => {
   useEffect(() => {
     const handleHashChange = () => {
       HandleLinkClick(getCurrentPath());
-      
+
     };
     const y = getCurrentPath()
-   
-  
-    console.log("activelink",activeLink)
+
+
+    console.log("activelink", activeLink)
     console.log("getCurrentlink", y)
 
-    
+
 
     window.addEventListener('hashchange', handleHashChange);
     return () => {
@@ -44,15 +45,15 @@ const Portfolio = () => {
     {
       path: '/',
       //navbar as rootelement
-      element: <Navroot activeLink={activeLink} HandleLinkClick={HandleLinkClick}/>,
+      element: <Navroot activeLink={activeLink} HandleLinkClick={HandleLinkClick} />,
       //error syntax element
-      errorElement: <Errormessage  />,
+      errorElement: <Errormessage />,
       //nested pages
       children: [
         {
           //homepage path & element
           path: '/',
-          element: <Homepage  activeLink={activeLink} HandleLinkClick={HandleLinkClick}/>
+          element: <Homepage activeLink={activeLink} HandleLinkClick={HandleLinkClick} />
         },
         {
           //services path & element
@@ -74,13 +75,17 @@ const Portfolio = () => {
   ])
 
   return (
-    <div className='body-port'>
-      <RouterProvider router={router}/>
-      <motion.div
-        className='progress-scroller main-nav'
-        style={{ scaleX: scrollYProgress }}
-      />
-    </div>
+    <>
+    {/* <div className="background-overlay"></div> */}
+      <Particles />
+      <div className='body-port' style={{zIndex: '9999'}}>
+        <RouterProvider router={router} />
+        <motion.div
+          className='progress-scroller main-nav'
+          style={{ scaleX: scrollYProgress }}
+        />
+      </div>
+    </>
   )
 }
 

@@ -2,7 +2,7 @@ import webInfo from '../webvalues.json'
 
 const Skill = ({ skill, skillLogo, skillLength }) => {
   return (
-    <div className='single-skill main-nav'>
+    <div className='single-skill bg-drop shadow-none'>
       <div className='d-flex fs-5 justify-content-between align-items-center'>
         <img
           src={skillLogo}

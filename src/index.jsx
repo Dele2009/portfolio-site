@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './App.css';
-import Portfolio from './portfolioApp';
 
+import Portfolio from './portfolioApp';
+import './text.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

@@ -20,16 +20,16 @@ function Aboutme() {
           <motion.div className='col-lg-5'
            
            animate={{ x: isInView ? 0 : '-300vw' }}
-             transition={{delay: 0.2,duration: 2, type: 'spring'}}
+             transition={{delay: 0.2,duration: 2,}}
           >
             <img className='img-fluid' src={me} alt='about-logo' />
           </motion.div>
           <motion.div className='col-lg-5'
             animate={{ x: isInView? 0 : '300vw'}}
-            transition={{delay: 0.2,duration: 2, type: 'spring'}}
+            transition={{delay: 0.2,duration: 2,}}
           >
             <h1 className='text-uppercase trans-back'>Personal Details</h1>
-            <p className='fs-5'>
+            <p className='fs-5 home-text'>
               You'll often find me immersed in the world of HTML, CSS, and
               JavaScript, crafting responsive and dynamic web solutions. I'm a
               fan of the latest frontend frameworks, especially React, and love
@@ -39,7 +39,7 @@ function Aboutme() {
             {/* modal to this to display more infomation*/}
             <motion.div
               animate={{ x: isInView? 0 : '300vw' }}
-              transition={{delay: 0.75,duration: 2, type: 'spring'}}
+              transition={{delay: 0.75,duration: 2,}}
             >
               <Button
                 className='btn border-0 bg-blue-grad text-uppercase text-light'
@@ -59,7 +59,9 @@ function Aboutme() {
               style={{ zIndex: '5000' }}
 
             >
-              <Modal.Header closeButton className='main-nav border-0'>
+              <Modal.Header closeButton className=' border-0'
+                style={{background: 'black'}}
+              >
                 <Modal.Title id='contained-modal-title-vcenter'>
                   <code className='text-light'>
                     D.<span className='trans-back drop-shadow'>append(</span>
@@ -68,7 +70,9 @@ function Aboutme() {
                   </code>
                 </Modal.Title>
               </Modal.Header>
-              <Modal.Body className='pt-5 main-nav text-light d-flex justify-content-center align-items-center flex-column gap-5'>
+              <Modal.Body className='pt-5  text-light d-flex justify-content-center align-items-center flex-column gap-5'
+                style={{background: 'black'}}
+              >
                 <div>
                   <h4 className='fs-3'>
                     🌐 <span className='trans-back'>Web Tech Lover</span>

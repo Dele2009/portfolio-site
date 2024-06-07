@@ -35,14 +35,12 @@ function Mainportfolionavbar({ activeLink, HandleLinkClick }) {
         animate={{ y: 0 }}
         transition={{ duration: 2 }}
 
-        className='position-fixed top-0 w-100 '
+        className='position-fixed top-0 w-100'
         style={{ zIndex: 3000 }}
       >
         <Navbar
           expand='lg'
-          className='main-nav px-0 px-md-2 px-lg-5'
-
-
+          className=' px-0 px-md-2 px-lg-5 main-nav pt-lg-3'
         >
           <Container fluid className='d-flex justify-content-between align-items-center'>
 
@@ -60,7 +58,7 @@ function Mainportfolionavbar({ activeLink, HandleLinkClick }) {
                 {/* D.<span className='trans-back drop-shadow'>append(</span>aminu
               <span className='trans-back drop-shadow'>)</span> */}
                 <span className='trans-back drop-shadow fs-1'>{'<'}</span>
-                <span>D.aminu</span>
+                <span className='trans-back'>D.aminu</span>
                 <span className='trans-back drop-shadow fs-1'>{'/>'}</span>
               </code>
             </Navbar.Brand>
