@@ -147,7 +147,7 @@ function ContactMe() {
                 <Form onSubmit={handle_submit}>
                   <Row className='mb-3'>
                     <Form.Group lg as={Col} controlId='formGridEmail'>
-                      <Form.Label>First Name</Form.Label>
+                      <Form.Label className='home-text'>First Name</Form.Label>
                       <Form.Control
                         type='text'
                         name='user_firstname'
@@ -161,7 +161,7 @@ function ContactMe() {
                     </Form.Group>
 
                     <Form.Group lg as={Col} controlId='formGridPassword'>
-                      <Form.Label>Last Name</Form.Label>
+                      <Form.Label className='home-text'>Last Name</Form.Label>
                       <Form.Control
                         type='text'
                         name='user_lastname'
@@ -176,7 +176,7 @@ function ContactMe() {
                   </Row>
 
                   <Form.Group className='mb-3' controlId='formGridAddress1'>
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label className='home-text'>Email</Form.Label>
                     <Form.Control
                       type='text'
                       name='user_email'
@@ -191,7 +191,7 @@ function ContactMe() {
 
                   <Row className='mb-3'>
                     <Form.Group lg as={Col} controlId='formGridstate'>
-                      <Form.Label>State</Form.Label>
+                      <Form.Label className='home-text'>State</Form.Label>
                       <Form.Select
                         name='user_state'
                         onChange={handle_change}
@@ -212,7 +212,7 @@ function ContactMe() {
                     </Form.Group>
 
                     <Form.Group lg as={Col} controlId='formGridcity'>
-                      <Form.Label>City</Form.Label>
+                      <Form.Label className='home-text'>City</Form.Label>
                       <Form.Control
                         type='text'
                         name='user_city'
@@ -222,7 +222,7 @@ function ContactMe() {
                     </Form.Group>
 
                     <Form.Group lg as={Col} controlId='formGridZip'>
-                      <Form.Label>Zip</Form.Label>
+                      <Form.Label className='home-text'>Zip</Form.Label>
                       <Form.Control
                         type='number'
                         name='user_zipcode'
@@ -234,7 +234,7 @@ function ContactMe() {
                   </Row>
 
                   <Form.Group className='mb-3' controlId='formGridAddress2'>
-                    <Form.Label>Message</Form.Label>
+                    <Form.Label className='home-text'>Message</Form.Label>
                     <Form.Control
                       as='textarea'
                       name='user_message'

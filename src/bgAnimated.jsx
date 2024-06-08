@@ -5,45 +5,13 @@ import * as THREE from 'three';
 
 
 
-const Particles = ({ Theme }) => {
+const Particles = ({ theme }) => {
     const mountRef = useRef(null);
 
-    const particleVertex = `
-  attribute float scale;
-  uniform float uTime;
 
-  void main() {
-    vec3 p = position;
-    float s = scale;
-
-    p.y += (sin(p.x + uTime) * 0.5) + (cos(p.y + uTime) * 0.1) * 2.0;
-    p.x += (sin(p.y + uTime) * 0.5);
-    s += (sin(p.x + uTime) * 0.5) + (cos(p.y + uTime) * 0.1) * 2.0;
-
-    vec4 mvPosition = modelViewMatrix * vec4(p, 1.0);
-    gl_PointSize = s * 15.0 * (1.0 / -mvPosition.z);
-    gl_Position = projectionMatrix * mvPosition;
-  }
-`;
-
-    let particleFragment;
-
-    if (Theme === 'light') {
-        particleFragment = `
-          uniform vec3 uColor;
-            void main() {
-                gl_FragColor = vec4(uColor, 0.5);
-            }
-        `;
-    } else {
-        particleFragment = `
-            void main() {
-                gl_FragColor = vec4(1.0, 1.0, 1.0, 0.5);
-            }
-        `;
-    }
 
     useEffect(() => {
+
         const mount = mountRef.current;
         const config = {
             winWidth: window.innerWidth,
@@ -61,9 +29,10 @@ const Particles = ({ Theme }) => {
         renderer.setSize(config.winWidth, config.winHeight);
         mount.appendChild(renderer.domElement);
 
-        if (Theme === 'light') {
-            renderer.setClearColor(new THREE.Color('white'), 1);
-
+        if (theme === 'light') {
+            renderer.setClearColor(new THREE.Color('#f8f8f8'), 1);
+        } else {
+            renderer.setClearColor(new THREE.Color('black'), 1);
         }
         // renderer.setClearColor(0x000000, 0);
         // #0000ff
@@ -87,19 +56,39 @@ const Particles = ({ Theme }) => {
             }
         }
 
-        let uniforms;
+        const particleVertex = `
+  attribute float scale;
+  uniform float uTime;
 
-        if (Theme === 'light') {
-            uniforms = {
-                uTime: { type: 'f', value: 0 },
-                uColor: { type: 'v3', value: new THREE.Color('black') }
-            }
-        } else {
-            uniforms = {
-                uTime: { type: 'f', value: 0 }
-                //  uColor: { type: 'v3', value: new THREE.Color('rgb(105, 240, 255)') }
-            }
-        }
+  void main() {
+    vec3 p = position;
+    float s = scale;
+
+    p.y += (sin(p.x + uTime) * 0.5) + (cos(p.y + uTime) * 0.1) * 2.0;
+    p.x += (sin(p.y + uTime) * 0.5);
+    s += (sin(p.x + uTime) * 0.5) + (cos(p.y + uTime) * 0.1) * 2.0;
+
+    vec4 mvPosition = modelViewMatrix * vec4(p, 1.0);
+    gl_PointSize = s * 15.0 * (1.0 / -mvPosition.z);
+    gl_Position = projectionMatrix * mvPosition;
+  }
+`;
+
+        const particleFragment = theme === 'light' ? `
+uniform vec3 uColor;
+void main() {
+  gl_FragColor = vec4(uColor, 0.5);
+}
+` : `
+void main() {
+  gl_FragColor = vec4(1.0, 1.0, 1.0, 0.5);
+}
+`;
+
+        const uniforms = {
+            uTime: { type: 'f', value: 0 },
+            ...(theme === 'light' && { uColor: { type: 'v3', value: new THREE.Color('black') } })
+        };
 
         const particleGeometry = new THREE.BufferGeometry();
         particleGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
@@ -137,7 +126,7 @@ const Particles = ({ Theme }) => {
             window.removeEventListener('resize', onResize);
             mount.removeChild(renderer.domElement);
         };
-    }, [Theme]);
+    }, [theme]);
 
     return <div className='top-0 left-0 bottom-0 right-0' ref={mountRef} style={{ width: '100vw', height: '100vh', zIndex: '-99', position: 'fixed' }} />;
 };

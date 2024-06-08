@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext,useMemo } from 'react'
 import { HashRouter as Router, createHashRouter, RouterProvider, Routes, Route, useLocation } from 'react-router-dom';
 
 import { motion, useScroll } from 'framer-motion'
@@ -10,20 +10,36 @@ import Service from './Portfolio-Pages/services'
 import Errormessage from './Portfolio-Pages/errorPage'
 import Navroot from './Navbarcomponent/route'
 import Particles from './bgAnimated'
-import { ThemeContext, ThemeProvider } from './ThemeContect'
 
 
 const Portfolio = () => {
-  const { Theme, toggleTheme } = useContext(ThemeContext)
+  // const { theme, toggleTheme } = useContext(ThemeContext)
   const { scrollYProgress } = useScroll()
+  const [theme, setTheme] = useState('dark')
+
+
 
   const getCurrentPath = () => window.location.hash.substring(1) || '/'
 
   const [activeLink, setActiveLink] = useState(getCurrentPath());
+  // useEffect(() => {
+  //   
+  // }, [Theme])
   useEffect(() => {
-    document.body.className = Theme
-  }, [Theme])
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.body.className = savedTheme
 
+    }
+  }, [])
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme)
+    document.body.className = newTheme
+    localStorage.setItem("theme", newTheme)
+  }
   useEffect(() => {
     const handleHashChange = () => {
       HandleLinkClick(getCurrentPath());
@@ -51,7 +67,7 @@ const Portfolio = () => {
     {
       path: '/',
       //navbar as rootelement
-      element: <Navroot activeLink={activeLink} HandleLinkClick={HandleLinkClick} Theme={Theme} toggleTheme={toggleTheme} />,
+      element: <Navroot activeLink={activeLink} HandleLinkClick={HandleLinkClick} theme={theme} toggleTheme={toggleTheme} />,
       //error syntax element
       errorElement: <Errormessage />,
       //nested pages
@@ -82,25 +98,25 @@ const Portfolio = () => {
 
   return (
     <>
-      <ThemeProvider>
-        {/* <div className="background-overlay"></div> */}
-        <Particles Theme={Theme} />
-        <div className='body-port' style={{ zIndex: '9999' }}>
-          <RouterProvider router={router} />
-          <motion.div
-            className='progress-scroller main-nav'
-            style={{ scaleX: scrollYProgress }}
-          />
-        </div>
-      </ThemeProvider>
+      {/* <div data-theme={theme}> */}
+      {/* <div className="background-overlay"></div> */}
+      <Particles theme={theme} />
+      <div className='body-port' style={{ zIndex: '9999' }}>
+        <RouterProvider router={router} />
+        <motion.div
+          className='progress-scroller main-nav'
+          style={{ scaleX: scrollYProgress }}
+        />
+      </div>
+      {/* </div> */}
     </>
   )
 }
 
 // const Portfolio = () => {
-//   <Router>
+//   // <ThemeProvider>
 //     <App />
-//   </Router>
+//   {/* </ThemeProvider> */}
 // }
 
 export default Portfolio

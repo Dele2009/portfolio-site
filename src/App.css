@@ -3,6 +3,10 @@
   --code-size10: 10px;
 }
 
+*{
+  transition: 0.3s 0s ease !important;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
