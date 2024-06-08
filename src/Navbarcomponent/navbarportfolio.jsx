@@ -25,7 +25,7 @@ import {
 import { IconContext } from 'react-icons'
 import { motion } from 'framer-motion'
 
-function Mainportfolionavbar({ activeLink, HandleLinkClick }) {
+function Mainportfolionavbar({ activeLink, HandleLinkClick,Theme, toggleTheme }) {
 
   const [active, setActive] = useState(true)
   return (
@@ -238,6 +238,11 @@ function Mainportfolionavbar({ activeLink, HandleLinkClick }) {
                   >
                     <BsLinkedin />
                   </Nav.Link>
+                   <button
+                    onClick={toggleTheme}
+                   >
+                    toggle
+                   </button>
                   {/* <Nav.Link>
                     <BsFacebook />
                   </Nav.Link> */}

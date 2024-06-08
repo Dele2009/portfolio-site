@@ -3,6 +3,8 @@ import Typed from 'typed.js';
 import hero from '../port-img/heros.svg';
 import webInfo from '../webvalues.json';
 import { motion, useInView } from 'framer-motion'
+import Lottie from 'lottie-react'
+import animeData from '../lottieHome.json'
 
 
 
@@ -77,9 +79,10 @@ function Intro() {
             <motion.div className='col-lg col-md'
             //  initial={{ y: '-300vh' }}
              animate={{ y: isInView ? 0 : '-300vh' }}
-             transition={{delay: 1,duration: 2,}}
+             transition={{delay: 0.2,duration: 2,}}
             >
-              <img className='img-fluid' src={hero} alt='' />
+              <Lottie animationData={animeData}/>
+              {/* <img className='img-fluid' src={hero} alt='' /> */}
             </motion.div>
           </div>
         </div>
