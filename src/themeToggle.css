@@ -39,9 +39,9 @@
 }
 
 .dark_mode_input:checked+.dark_mode_label:after {
-    left: 62px !important;
+    left: 37px !important;
     transform: translateX(-100%) !important;
-    background: linear-gradient(180deg, #b5b5b5, #fafafa) !important;
+    background: linear-gradient(180deg, #777, #fafafa) !important;
 }
 
 .dark_mode_label:active:after {
