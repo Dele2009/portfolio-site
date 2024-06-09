@@ -40,7 +40,7 @@
 
 .dark_mode_input:checked+.dark_mode_label:after {
     left: 37px !important;
-    transform: translateX(-100%) !important;
+    /* transform: translateX(-100%) !important; */
     background: linear-gradient(180deg, #777, #fafafa) !important;
 }
 
