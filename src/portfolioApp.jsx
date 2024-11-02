@@ -91,6 +91,11 @@ const Portfolio = () => {
           //Contact-me path & element
           path: '/contact_Me',
           element: <ContactMe />
+        },
+        {
+          //Contact-me path & element
+          path: '/sitemap.xml',
+          //element: <ContactMe />
         }
       ]
     }
